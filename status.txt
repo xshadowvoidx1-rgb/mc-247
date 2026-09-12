@@ -1,2 +1,1 @@
-15:30:09 UTC — SERVER NEVER CAME UP
-scripts/mc-run.sh: line 88: /home/runner/mc/jre/bin/java: No such file or directory
+15:32:07 UTC — FATAL: JRE install failed after 3 attempts (url: <empty>)
