@@ -106,7 +106,6 @@ start_server() {
   log "server started pid=$JAVA_PID"
 }
 
-echo "restart" >&3 2>/dev/null || true
 start_server
 beacon "$(date -u +%H:%M:%S) UTC — server starting (connect plugin: $(ls "$SRV/plugins/" | grep -c connect-spigot || echo 0) jar, config written)"
 
@@ -128,6 +127,32 @@ $(grep -iE 'connect|minekube|endpoint' "$WORK/console.log" | tail -20)
 --- errors ---
 $(grep -iE 'error|exception|severe' "$WORK/console.log" | tail -10)"
 
+# Remote console — watch repo file console-command.txt; execute each line
+# on the server console when the file's sha changes. Gives the operator a
+# permanent admin channel (op/whitelist/etc.) without VM access.
+CMD_SHA_FILE="$WORK/.cmd_sha"
+last_cmd_sha="$(cat "$CMD_SHA_FILE" 2>/dev/null || echo '')"
+check_remote_console() {
+  local json sha cmds line
+  json="$(gh_api "$API/repos/$REPO/contents/console-command.txt" 2>/dev/null)"
+  sha="$(echo "$json" | jq -r '.sha // empty')"
+  [ -z "$sha" ] || [ "$sha" = "$last_cmd_sha" ] && return 0
+  cmds="$(echo "$json" | jq -r '.content' | base64 -d 2>/dev/null)"
+  while IFS= read -r line; do
+    case "$line" in ''|\#*) continue;; esac
+    log "remote-console: $line"
+    echo "$line" >&3
+    sleep 1
+  done <<< "$cmds"
+  echo "$sha" > "$CMD_SHA_FILE"
+  last_cmd_sha="$sha"
+  sleep 3
+  beacon "$(date -u +%H:%M:%S) UTC — remote-console executed:
+$cmds
+--- console tail ---
+$(tail -8 "$WORK/console.log")"
+}
+
 # ------------------------------------------------- 5. Serve until handover time
 while :; do
   now=$(date +%s)
@@ -141,6 +166,7 @@ while :; do
   [ "$HANDOVER_NOW" = "true" ] && { log "HANDOVER_NOW set"; break; }
   [ "$now" -ge "$HANDOVER_AT" ] && { log "handover window reached"; break; }
   [ "$now" -ge "$HARDRAIL_AT" ] && { log "HARD RAIL — forcing handover"; break; }
+  check_remote_console
   sleep 20
 done
 

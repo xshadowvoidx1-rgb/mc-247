@@ -1,0 +1,3 @@
+# remote console — one command per line, # = comment
+# executed on the server console within ~30s of a push
+op xxShadowVoidxx
