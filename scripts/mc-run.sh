@@ -153,6 +153,21 @@ $cmds
 $(tail -8 "$WORK/console.log")"
 }
 
+# Remote handover trigger — creating repo file handover.txt forces a graceful
+# handover on the next loop tick. The file is consumed (deleted) when read, so
+# the trigger is one-shot and cannot loop the successor.
+check_handover_trigger() {
+  local json sha
+  json="$(gh_api "$API/repos/$REPO/contents/handover.txt" 2>/dev/null)"
+  sha="$(echo "$json" | jq -r '.sha // empty')"
+  [ -z "$sha" ] && return 1
+  log "handover trigger file detected — consuming"
+  beacon "$(date -u +%H:%M:%S) UTC — handover trigger received, starting graceful handover"
+  gh_api -X DELETE "$API/repos/$REPO/contents/handover.txt" \
+    -d "{\"message\":\"consume handover trigger\",\"sha\":\"$sha\"}" >/dev/null || true
+  return 0
+}
+
 # ------------------------------------------------- 5. Serve until handover time
 while :; do
   now=$(date +%s)
@@ -167,6 +182,7 @@ while :; do
   [ "$now" -ge "$HANDOVER_AT" ] && { log "handover window reached"; break; }
   [ "$now" -ge "$HARDRAIL_AT" ] && { log "HARD RAIL — forcing handover"; break; }
   check_remote_console
+  check_handover_trigger && { log "remote handover triggered"; break; }
   sleep 20
 done
 
