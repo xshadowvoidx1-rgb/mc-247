@@ -1,13 +1,1 @@
-16:03:28 UTC — remote-console executed:
-# remote console — one command per line, # = comment
-# executed on the server console within ~30s of a push
-# (op persists in ops.json across handovers — no auto re-op needed)
---- console tail ---
-[16:01:07 INFO]: xxShadowVoidxx lost connection: Disconnected
-[16:02:48 INFO]: [connect] Connect tunneled player logged in as xxShadowVoidxx (UUID: c3a8e7c8-2620-3faf-9f55-0aeb6055570e)
-[16:02:49 INFO]: xxShadowVoidxx[/172.16.20.250:0] logged in with entity id 2 at ([minecraft:overworld]6.513282777752316, 65.0, -3.3913819962302263)
-[16:02:54 INFO]: [Not Secure] xxShadowVoidxx ➠ hi
-[16:02:57 INFO]: [Not Secure] xxShadowVoidxx ➠ ping
-[16:03:01 INFO]: xxShadowVoidxx issued server command: /uptime
-[16:03:10 INFO]: xxShadowVoidxx issued server command: /rambar
-[16:03:21 INFO]: xxShadowVoidxx issued server command: /cpuchecker:checkcpu
+16:17:26 UTC — handover trigger received, starting graceful handover
