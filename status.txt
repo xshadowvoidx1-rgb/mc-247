@@ -1,13 +1,1 @@
-17:09:34 UTC — remote-console executed:
-# remote console — one command per line, # = comment
-# executed on the server console within ~30s of a push
-# (op persists in ops.json across handovers — no auto re-op needed)
---- console tail ---
-[17:08:28 INFO]: [ZonePractice]   Latest version  : 7.8.0-SNAPSHOT
-[17:08:28 INFO]: [ZonePractice]   Download        : https://github.com/ZoneDevelopement/ZonePractice-Pro/releases/latest
-[17:08:28 INFO]: [ZonePractice] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-[17:09:08 INFO]: [HorriblePlayerLoginEventHack] You have plugins listening to the PlayerLoginEvent, this will cause re-configuration APIs to be unavailable: [LuckPerms, connect, WorldGuard]
-[17:09:08 INFO]: [connect] Connect tunneled player logged in as xxShadowVoidxx (UUID: c3a8e7c8-2620-3faf-9f55-0aeb6055570e)
-[17:09:10 INFO]: xxShadowVoidxx[/172.16.20.250:0] logged in with entity id 1 at ([minecraft:overworld]6.513282777752316, 65.0, -3.3913819962302263)
-[17:09:10 INFO]: [packetevents] Loading block mappings for V_26_2/22...
-[17:09:11 INFO]: [packetevents] Finished loading block mappings for V_26_2/22 in 293.680612ms
+22:19:54 UTC — JRE ready (openjdk version "26.0.2.1" 2026-08-18)
