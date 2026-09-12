@@ -1,1 +1,1 @@
-17:05:42 UTC — pack extracted 2.6G
+17:05:43 UTC — server starting (connect plugin: 1 jar, config written)
