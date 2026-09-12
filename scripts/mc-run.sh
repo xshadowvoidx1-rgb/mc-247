@@ -37,14 +37,28 @@ cd "$WORK"
 # ---------------------------------------------------------------- 1. Java 26
 log "installing Temurin 26 JRE"
 if [ ! -x "$WORK/jre/bin/java" ]; then
-  jre_url="$(curl -s "https://api.adoptium.net/v3/assets/latest/26?image_type=jre&os=linux&arch=x64" | jq -r '.[0].binaries[0].package.link')"
-  curl -sL "$jre_url" | tar xz -C "$WORK"
+  jre_ok=0
+  for attempt in 1 2 3; do
+    jre_url="$(curl -sf "https://api.adoptium.net/v3/assets/latest/26?image_type=jre&os=linux&arch=x64" | jq -r '.[0].binaries[0].package.link')"
+    if [ "${jre_url:-}" != "null" ] && [ -n "$jre_url" ] && [[ "$jre_url" == https://* ]]; then
+      curl -sfL "$jre_url" | tar xz -C "$WORK" && { jre_ok=1; break; }
+    fi
+    log "JRE install attempt $attempt failed (url=${jre_url:-<empty>})"
+    sleep 10
+  done
   jdk_dir="$(find "$WORK" -maxdepth 1 -type d -name 'jdk-*' | head -1)"
+  if [ "$jre_ok" != "1" ] || [ -z "$jdk_dir" ]; then
+    beacon "$(date -u +%H:%M:%S) UTC — FATAL: JRE install failed after 3 attempts (url: ${jre_url:-<empty>})"
+    exit 1
+  fi
   mv "$jdk_dir" "$WORK/jre"
 fi
 JAVA="$WORK/jre/bin/java"
-"$JAVA" -version 2>&1 | head -1
-beacon "$(date -u +%H:%M:%S) UTC — JRE ready"
+if ! "$JAVA" -version 2>&1 | head -1; then
+  beacon "$(date -u +%H:%M:%S) UTC — FATAL: java binary broken after install"
+  exit 1
+fi
+beacon "$(date -u +%H:%M:%S) UTC — JRE ready ($("$JAVA" -version 2>&1 | head -1))"
 
 # ------------------------------------------------------- 2. World pack (Release)
 if [ ! -d "$SRV" ]; then
