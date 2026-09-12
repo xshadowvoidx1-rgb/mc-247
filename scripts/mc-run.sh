@@ -46,7 +46,13 @@ if [ ! -d "$SRV" ]; then
   log "pack extracted: $(du -sh "$SRV" | cut -f1)"
 fi
 
-# ------------------------------------- 3. Minekube Connect config (idempotent)
+# ------------------------------------- 3. Minekube Connect plugin + config
+# The world-pack tarball predates the connect plugin, so install it from the
+# repo checkout (bundle/connect-spigot.jar) whenever it is missing.
+if [ ! -f "$SRV/plugins/connect-spigot.jar" ]; then
+  log "installing connect-spigot.jar from repo bundle"
+  cp "$(dirname "$0")/../bundle/connect-spigot.jar" "$SRV/plugins/"
+fi
 mkdir -p "$SRV/plugins/connect"
 cat > "$SRV/plugins/connect/config.yml" <<EOF
 endpoint: ${ENDPOINT}
