@@ -6,6 +6,7 @@
 set -uo pipefail
 
 REPO="xshadowvoidx1-rgb/mc-247"
+REPO_DIR="$(cd "$(dirname "$0")/.." && pwd)"  # absolute checkout path — the script cd's away below, so relative paths would break
 WORK="/home/runner/mc"
 SRV="$WORK/server"
 API="https://api.github.com"
@@ -65,7 +66,7 @@ fi
 # repo checkout (bundle/connect-spigot.jar) whenever it is missing.
 if [ ! -f "$SRV/plugins/connect-spigot.jar" ]; then
   log "installing connect-spigot.jar from repo bundle"
-  cp "$(dirname "$0")/../bundle/connect-spigot.jar" "$SRV/plugins/"
+  cp "$REPO_DIR/bundle/connect-spigot.jar" "$SRV/plugins/"
 fi
 mkdir -p "$SRV/plugins/connect"
 cat > "$SRV/plugins/connect/config.yml" <<EOF
