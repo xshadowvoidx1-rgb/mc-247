@@ -81,7 +81,7 @@ export CONNECT_TOKEN
 cd "$SRV"
 rm -f console.in
 mkfifo console.in
-exec 3>console.in   # hold FIFO open for the whole script lifetime
+exec 3<>console.in  # O_RDWR: opening a FIFO write-only would block until a reader appears — but the server starts after this line, so that would deadlock
 
 start_server() {
   "$JAVA" -Xms4G -Xmx"$RAM" -jar server.jar nogui < console.in > "$WORK/console.log" 2>&1 &
