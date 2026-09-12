@@ -1,0 +1,1 @@
+GO — graceful handover requested by operator
