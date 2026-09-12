@@ -1,1 +1,1 @@
-16:17:26 UTC — handover trigger received, starting graceful handover
+16:19:33 UTC — JRE ready (openjdk version "26.0.2.1" 2026-08-18)
