@@ -1,13 +1,13 @@
-15:57:58 UTC — remote-console executed:
+16:03:28 UTC — remote-console executed:
 # remote console — one command per line, # = comment
 # executed on the server console within ~30s of a push
-op xxShadowVoidxx
+# (op persists in ops.json across handovers — no auto re-op needed)
 --- console tail ---
-[15:56:51 INFO]: [ZonePractice]   Download        : https://github.com/ZoneDevelopement/ZonePractice-Pro/releases/latest
-[15:56:51 INFO]: [ZonePractice] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-[15:57:37 INFO]: [HorriblePlayerLoginEventHack] You have plugins listening to the PlayerLoginEvent, this will cause re-configuration APIs to be unavailable: [LuckPerms, connect, WorldGuard]
-[15:57:37 INFO]: [connect] Connect tunneled player logged in as xxShadowVoidxx (UUID: c3a8e7c8-2620-3faf-9f55-0aeb6055570e)
-[15:57:40 INFO]: xxShadowVoidxx[/172.16.20.250:0] logged in with entity id 1 at ([minecraft:overworld]6.513282777752316, 65.0, -3.3913819962302263)
-[15:57:40 INFO]: [packetevents] Loading block mappings for V_26_2/22...
-[15:57:40 INFO]: [packetevents] Finished loading block mappings for V_26_2/22 in 473.653839ms
-[15:57:54 INFO]: Made xxShadowVoidxx a server operator
+[16:01:07 INFO]: xxShadowVoidxx lost connection: Disconnected
+[16:02:48 INFO]: [connect] Connect tunneled player logged in as xxShadowVoidxx (UUID: c3a8e7c8-2620-3faf-9f55-0aeb6055570e)
+[16:02:49 INFO]: xxShadowVoidxx[/172.16.20.250:0] logged in with entity id 2 at ([minecraft:overworld]6.513282777752316, 65.0, -3.3913819962302263)
+[16:02:54 INFO]: [Not Secure] xxShadowVoidxx ➠ hi
+[16:02:57 INFO]: [Not Secure] xxShadowVoidxx ➠ ping
+[16:03:01 INFO]: xxShadowVoidxx issued server command: /uptime
+[16:03:10 INFO]: xxShadowVoidxx issued server command: /rambar
+[16:03:21 INFO]: xxShadowVoidxx issued server command: /cpuchecker:checkcpu
