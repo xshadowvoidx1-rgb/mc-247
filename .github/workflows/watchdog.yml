@@ -1,12 +1,23 @@
 name: MC Watchdog
 
+# Two triggers:
+# - workflow_run: fires the moment any MC Server run completes (crash/cancel/
+#   timeout) — primary heal path, event-driven, immune to cron queue delays.
+# - schedule: belt-and-suspenders backstop (GitHub cron is best-effort).
 on:
+  workflow_run:
+    workflows: ["MC Server"]
+    types: [completed]
   schedule:
-    - cron: "*/15 * * * *"
+    - cron: "*/5 * * * *"
   workflow_dispatch:
 
 jobs:
   check:
+    # Runs on every MC Server completion, including successes: a graceful exit
+    # whose successor-dispatch failed still reports success. The script's
+    # active/queued check is the real gate (a healthy handover has a queued
+    # successor and this job no-ops).
     runs-on: ubuntu-latest
     permissions: {}
     steps:
