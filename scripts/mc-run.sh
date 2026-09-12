@@ -18,6 +18,18 @@ CRASH_RESTARTS=0
 log() { echo "[$(date -u +%H:%M:%S)] $*"; }
 gh_api() { curl -s -H "Authorization: token $GH_PAT" -H "Accept: application/vnd.github+json" "$@"; }
 
+# Live status beacon — push milestone text to repo file status.txt so the
+# operator can watch the boot in real time (job logs are unreadable mid-run).
+beacon() {
+  local body msg_sha
+  msg_sha="$(gh_api "$API/repos/$REPO/contents/status.txt" | jq -r '.sha // empty')"
+  body="{\"message\":\"status beacon\",\"content\":\"$(printf '%s' "$1" | base64 -w0)\""
+  [ -n "$msg_sha" ] && body="$body,\"sha\":\"$msg_sha\""
+  body="$body}"
+  gh_api -X PUT "$API/repos/$REPO/contents/status.txt" -d "$body" >/dev/null || true
+}
+tail_console() { tail -c 3000 "$WORK/console.log" 2>/dev/null | grep -iE 'connect|minekube|error|exception|done|fail' | tail -15; }
+
 mkdir -p "$WORK"
 cd "$WORK"
 
@@ -31,6 +43,7 @@ if [ ! -x "$WORK/jre/bin/java" ]; then
 fi
 JAVA="$WORK/jre/bin/java"
 "$JAVA" -version 2>&1 | head -1
+beacon "$(date -u +%H:%M:%S) UTC — JRE ready"
 
 # ------------------------------------------------------- 2. World pack (Release)
 if [ ! -d "$SRV" ]; then
@@ -44,6 +57,7 @@ if [ ! -d "$SRV" ]; then
   tar xzf "$WORK/pack.tar.gz" -C "$SRV"
   rm -f "$WORK/pack.tar.gz"
   log "pack extracted: $(du -sh "$SRV" | cut -f1)"
+  beacon "$(date -u +%H:%M:%S) UTC — pack extracted $(du -sh "$SRV" | cut -f1)"
 fi
 
 # ------------------------------------- 3. Minekube Connect plugin + config
@@ -77,6 +91,7 @@ start_server() {
 
 echo "restart" >&3 2>/dev/null || true
 start_server
+beacon "$(date -u +%H:%M:%S) UTC — server starting (connect plugin: $(ls "$SRV/plugins/" | grep -c connect-spigot || echo 0) jar, config written)"
 
 # Wait for "Done" in console log (max 8 min)
 log "waiting for server to come up…"
@@ -84,8 +99,17 @@ for i in $(seq 1 96); do
   grep -q 'Done (' "$WORK/console.log" 2>/dev/null && break
   sleep 5
 done
-grep -q 'Done (' "$WORK/console.log" || { log "server never came up"; tail -30 "$WORK/console.log"; exit 3; }
+grep -q 'Done (' "$WORK/console.log" || { log "server never came up"; tail -30 "$WORK/console.log"; beacon "$(date -u +%H:%M:%S) UTC — SERVER NEVER CAME UP
+$(tail -c 4000 "$WORK/console.log")"; exit 3; }
 log "SERVER IS UP — public address: ${ENDPOINT}.play.minekube.net"
+
+# give Connect a minute to register, then beacon what it logged
+sleep 60
+beacon "$(date -u +%H:%M:%S) UTC — SERVER UP
+--- connect/minekube lines ---
+$(grep -iE 'connect|minekube|endpoint' "$WORK/console.log" | tail -20)
+--- errors ---
+$(grep -iE 'error|exception|severe' "$WORK/console.log" | tail -10)"
 
 # ------------------------------------------------- 5. Serve until handover time
 while :; do
