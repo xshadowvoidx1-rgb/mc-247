@@ -1,2 +1,1 @@
-15:18:00 UTC — server starting (connect plugin: 0
-0 jar, config written)
+15:21:33 UTC — JRE ready
