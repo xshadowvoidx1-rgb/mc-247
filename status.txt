@@ -1,1 +1,1 @@
-15:32:07 UTC — FATAL: JRE install failed after 3 attempts (url: <empty>)
+15:34:47 UTC — JRE ready (openjdk version "26.0.2.1" 2026-08-18)
