@@ -1,0 +1,30 @@
+name: MC Server
+
+on:
+  workflow_dispatch:
+    inputs:
+      handover_now:
+        description: "Handover immediately after boot (testing)"
+        type: boolean
+        default: false
+
+# Only ONE server VM may ever exist — prevents watchdog/self-dispatch races
+concurrency:
+  group: mc-server
+  cancel-in-progress: false
+
+jobs:
+  server:
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+    permissions:
+      contents: read
+    env:
+      GH_PAT: ${{ secrets.GH_PAT }}
+      CONNECT_TOKEN: ${{ secrets.CONNECT_TOKEN }}
+      ENDPOINT: shadowsinthedark
+      HANDOVER_NOW: ${{ inputs.handover_now }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run server cycle
+        run: bash scripts/mc-run.sh

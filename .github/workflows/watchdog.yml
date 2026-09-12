@@ -1,0 +1,17 @@
+name: MC Watchdog
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    permissions: {}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Ensure server running
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: bash scripts/watchdog.sh
