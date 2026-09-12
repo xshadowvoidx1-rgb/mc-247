@@ -39,8 +39,10 @@ log "installing Temurin 26 JRE"
 if [ ! -x "$WORK/jre/bin/java" ]; then
   jre_ok=0
   for attempt in 1 2 3; do
-    jre_url="$(curl -sf "https://api.adoptium.net/v3/assets/latest/26?image_type=jre&os=linux&arch=x64" | jq -r '.[0].binaries[0].package.link')"
-    if [ "${jre_url:-}" != "null" ] && [ -n "$jre_url" ] && [[ "$jre_url" == https://* ]]; then
+    # Adoptium's /v3/assets/ API endpoints are dead (404 as of 2026-09);
+    # Temurin binaries live on GitHub release assets instead.
+    jre_url="$(gh_api "$API/repos/adoptium/temurin26-binaries/releases/latest" | jq -r '.assets[] | select(.name | test("jre_x64_linux_hotspot.*tar.gz$")) | .browser_download_url' | head -1)"
+    if [ -n "$jre_url" ] && [ "$jre_url" != "null" ]; then
       curl -sfL "$jre_url" | tar xz -C "$WORK" && { jre_ok=1; break; }
     fi
     log "JRE install attempt $attempt failed (url=${jre_url:-<empty>})"
