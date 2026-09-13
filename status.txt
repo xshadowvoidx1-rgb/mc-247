@@ -1,1 +1,1 @@
-08:45:10 UTC — JRE ready (openjdk version "26.0.2.1" 2026-08-18)
+08:45:58 UTC — pack extracted 2.6G
