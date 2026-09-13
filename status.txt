@@ -1,21 +1,13 @@
-19:12:06 UTC — SERVER UP
---- connect/minekube lines ---
- - AngleGuard (1.4.2), AntiPearlGlitch (2.0), CPUChecker (1.0), CommandBlocker (1.7.2), Essentials (2.22.0-dev+112-5baf239), FastAsyncWorldEdit (2.15.3+1704422), FasterCrystals (2.2.1), KnockbackSync (1.3.6-dev-b141), LuckPerms (5.5.53), MaceGuard (1.0.0), Multiverse-Core (5.7.2), OffhandGhostFix (1.0.0), PlaceholderAPI (2.12.3), SkinsRestorer (15.12.5), Skript (2.16.1), TAB (6.1.0), TotemGuard (2.1.4), ViaBackwards (5.11.0), ViaVersion (5.11.0), VoidGen (2.3.8), Vulcan (2.9.7.26), WeGuardian (2.4), WorldGuard (7.0.18+2392-fa605e6), ZonePracticePro (7.7.0-SNAPSHOT), ajLeaderboards (2.11.0), connect (0.15.11), packetevents (2.13.0)
-[19:10:42 INFO]: [SpigotLibraryLoader] [TotemGuard] Loaded library /home/runner/mc/server/libraries/com/mysql/mysql-connector-j/9.4.0/mysql-connector-j-9.4.0.jar
-WARNING: Final field channels in class net.minecraft.server.network.ServerConnectionListener has been mutated reflectively by class com.github.retrooper.packetevents.util.reflection.ReflectionObject in unnamed module @6d63e26a (file:/home/runner/mc/server/plugins/packetevents-spigot-2.13.0.jar)
-[19:10:46 INFO]: [connect] Loading server plugin connect v0.15.11
-[19:10:47 WARN]: [connect] en_ is not a supported language.
-[19:10:47 INFO]: [connect] Took 1,065ms to boot Connect
-[19:10:53 INFO]: [me.wethink.weguardian.lib.hikari.pool.HikariPool] WeGuardian-SQLite-Pool - Added connection org.sqlite.jdbc4.JDBC4Connection@6f2bbc3
-[19:10:53 INFO]: [WeGuardian] Database connection pool initialized successfully (SQLITE)
-[19:10:53 WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
-[19:10:58 INFO]: [connect] Enabling connect v0.15.11
-[19:10:58 INFO]: [connect] Endpoint name: shadowsinthedark
-[19:10:58 INFO]: [connect] Your public address: shadowsinthedark.play.minekube.net
-[19:10:58 INFO]: [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection conn0: url=jdbc:h2:file:/home/runner/mc/server/plugins/TotemGuard/db/data user=ROOT
-[19:10:58 INFO]: [connect] Started watching for new player sessions
---- errors ---
-[19:10:55 ERROR]: [Multiverse-Core] Failed to autoload world Event: Failure{reason=WORLD_FOLDER_INVALID}
-[19:10:55 ERROR]: [Multiverse-Core] Failed to autoload world Test: Failure{reason=WORLD_FOLDER_INVALID}
-[19:10:57 ERROR]: [Essentials] You are running a server fork that is known to be extremely dangerous and lead to data loss. It is strongly recommended you switch to a more stable server software like Paper.
-[19:11:03 INFO]: [Skript] All scripts loaded without errors.
+19:12:10 UTC — remote-console executed:
+# remote console — one command per line, # = comment
+# executed on the server console within ~30s of a push
+# (op persists in ops.json across handovers — no auto re-op needed)
+--- console tail ---
+[19:11:05 INFO]: [ZonePractice] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[19:11:05 INFO]: [ZonePractice] ⚠ Update available for ZonePractice Pro!
+[19:11:05 INFO]: [ZonePractice]   Current version : 7.7.0
+[19:11:05 INFO]: [ZonePractice]   Latest version  : 7.8.0-SNAPSHOT
+[19:11:05 INFO]: [ZonePractice]   Download        : https://github.com/ZoneDevelopement/ZonePractice-Pro/releases/latest
+[19:11:05 INFO]: [ZonePractice] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[19:11:06 WARN]: [Essentials] ʏᴏᴜ'ʀᴇ 25 ᴇꜱꜱᴇɴᴛɪᴀʟꜱx ᴅᴇᴠ ʙᴜɪʟᴅ(ꜱ) ᴏᴜᴛ ᴏꜰ ᴅᴀᴛᴇ!
+[19:11:06 WARN]: [Essentials] ᴅᴏᴡɴʟᴏᴀᴅ ɪᴛ ʜᴇʀᴇ: https://essentialsx.net/downloads.html
