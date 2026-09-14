@@ -1,1 +1,1 @@
-03:59:54 UTC — JRE ready (openjdk version "26.0.2.1" 2026-08-18)
+03:59:59 UTC — fresh install written (folia+velocity+connect)
