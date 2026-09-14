@@ -196,7 +196,11 @@ start_folia() {
   log "folia started pid=$FOLIA_PID"
 }
 start_velocity() {
-  "$JAVA" -Xms256M -Xmx512M -jar "$VEL/velocity.jar" > "$WORK/velocity.log" 2>&1 &
+  # MUST run from $VEL — Velocity resolves velocity.toml, forwarding.secret and
+  # plugins/ from its working directory. From $SRV it silently generates a
+  # default config (forwarding off, no connect endpoint) and the tunnel never
+  # registers.
+  (cd "$VEL" && exec "$JAVA" -Xms256M -Xmx512M -jar velocity.jar) > "$WORK/velocity.log" 2>&1 &
   VEL_PID=$!
   log "velocity started pid=$VEL_PID"
 }
