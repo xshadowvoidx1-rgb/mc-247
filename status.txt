@@ -1,5 +1,13 @@
-04:02:52 UTC — SERVER UP (Folia survival via Velocity)
---- connect lines ---
-[04:00:23 INFO]: Connections will use epoll channels, libdeflate (Linux x86_64) compression, OpenSSL 3.x.x (Linux x86_64) ciphers
-[04:00:23 WARN]: Player info forwarding is disabled! All players will appear to be connecting from the proxy and will have offline-mode UUIDs.
---- folia errors ---
+04:02:56 UTC — remote-console executed:
+# remote console — one command per line, # = comment
+# executed on the server console within ~30s of a push
+# (op persists in ops.json across handovers — no auto re-op needed)
+--- console tail ---
+[04:00:17 INFO]: Prepared spawn area in 636 ms
+[04:00:17 INFO]: Loading 0 persistent chunks for world 'minecraft:the_end'...
+[04:00:17 INFO]: Preparing spawn area: 100%
+[04:00:17 INFO]: Prepared spawn area in 176 ms
+[04:00:17 INFO]: Done preparing level "world" (7.881s)
+[04:00:17 INFO]: [spark] The spark plugin has been preferred but was not loaded. The bundled spark profiler will enabled instead.
+[04:00:17 INFO]: [spark] The spark profiler will not be enabled because it is currently disabled in the configuration.
+[04:00:17 INFO]: Done (14.194s)! For help, type "help"
