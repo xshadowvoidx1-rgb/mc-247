@@ -1,13 +1,1 @@
-19:12:10 UTC — remote-console executed:
-# remote console — one command per line, # = comment
-# executed on the server console within ~30s of a push
-# (op persists in ops.json across handovers — no auto re-op needed)
---- console tail ---
-[19:11:05 INFO]: [ZonePractice] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-[19:11:05 INFO]: [ZonePractice] ⚠ Update available for ZonePractice Pro!
-[19:11:05 INFO]: [ZonePractice]   Current version : 7.7.0
-[19:11:05 INFO]: [ZonePractice]   Latest version  : 7.8.0-SNAPSHOT
-[19:11:05 INFO]: [ZonePractice]   Download        : https://github.com/ZoneDevelopement/ZonePractice-Pro/releases/latest
-[19:11:05 INFO]: [ZonePractice] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-[19:11:06 WARN]: [Essentials] ʏᴏᴜ'ʀᴇ 25 ᴇꜱꜱᴇɴᴛɪᴀʟꜱx ᴅᴇᴠ ʙᴜɪʟᴅ(ꜱ) ᴏᴜᴛ ᴏꜰ ᴅᴀᴛᴇ!
-[19:11:06 WARN]: [Essentials] ᴅᴏᴡɴʟᴏᴀᴅ ɪᴛ ʜᴇʀᴇ: https://essentialsx.net/downloads.html
+00:21:49 UTC — JRE ready (openjdk version "26.0.2.1" 2026-08-18)
