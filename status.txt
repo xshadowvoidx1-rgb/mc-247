@@ -1,13 +1,1 @@
-00:23:59 UTC — remote-console executed:
-# remote console — one command per line, # = comment
-# executed on the server console within ~30s of a push
-# (op persists in ops.json across handovers — no auto re-op needed)
---- console tail ---
-[00:22:54 INFO]: [PlaceholderAPI] Successfully registered internal expansion: zppro [1.0.1]
-[00:22:54 INFO]: [PlaceholderAPI] Successfully registered internal expansion: zpp [1.0.1]
-[00:22:54 INFO]: [ZonePractice] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-[00:22:54 INFO]: [ZonePractice] ⚠ Update available for ZonePractice Pro!
-[00:22:54 INFO]: [ZonePractice]   Current version : 7.7.0
-[00:22:54 INFO]: [ZonePractice]   Latest version  : 7.8.0-SNAPSHOT
-[00:22:54 INFO]: [ZonePractice]   Download        : https://github.com/ZoneDevelopement/ZonePractice-Pro/releases/latest
-[00:22:54 INFO]: [ZonePractice] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+03:59:54 UTC — JRE ready (openjdk version "26.0.2.1" 2026-08-18)
