@@ -106,6 +106,7 @@ gamemode=survival
 difficulty=normal
 motd=Shadows In The Dark §7— Survival (Folia)
 level-name=world
+level-seed=712262452098460
 spawn-protection=0
 view-distance=8
 simulation-distance=6
