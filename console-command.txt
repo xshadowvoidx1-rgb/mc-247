@@ -1,3 +1,1 @@
-# remote console — one command per line, # = comment
-# executed on the server console within ~30s of a push
-# (op persists in ops.json across handovers — no auto re-op needed)
+seed
