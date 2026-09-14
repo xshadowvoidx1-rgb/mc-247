@@ -1,1 +1,5 @@
-04:00:00 UTC — folia starting (survival, offline, 25566)
+04:02:52 UTC — SERVER UP (Folia survival via Velocity)
+--- connect lines ---
+[04:00:23 INFO]: Connections will use epoll channels, libdeflate (Linux x86_64) compression, OpenSSL 3.x.x (Linux x86_64) ciphers
+[04:00:23 WARN]: Player info forwarding is disabled! All players will appear to be connecting from the proxy and will have offline-mode UUIDs.
+--- folia errors ---
