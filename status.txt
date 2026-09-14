@@ -1,17 +1,11 @@
-04:35:49 UTC — SERVER UP (Folia survival via Velocity)
---- velocity.log tail ---
-2026-09-14T04:33:20.120350464Z main WARN Advanced terminal features are not available in this environment
-[04:33:20 INFO]: Booting up Velocity 4.1.1...
-[04:33:20 INFO]: Connections will use epoll channels, libdeflate (Linux x86_64) compression, OpenSSL 3.x.x (Linux x86_64) ciphers
-[04:33:20 WARN]: Player info forwarding is disabled! All players will appear to be connecting from the proxy and will have offline-mode UUIDs.
-[04:33:20 INFO]: Loading localizations...
-[04:33:20 INFO]: Loading plugins...
-[04:33:20 INFO]: Loaded 1 plugins
-[04:33:20 INFO]: Listening on /[0:0:0:0:0:0:0:0]:25565
-[04:33:21 INFO]: Velocity and some of its plugins collect metrics and send them to bStats (https://bStats.org).
-[04:33:21 INFO]: bStats collects some basic information for plugin authors, like how many people use
-[04:33:21 INFO]: their plugin and their total player count. It's recommended to keep bStats enabled, but
-[04:33:21 INFO]: if you're not comfortable with this, you can opt-out by editing the config.txt file in
-[04:33:21 INFO]: the '/plugins/bStats/' folder and setting enabled to false.
-[04:33:21 INFO]: Done (0.8s)!
---- folia errors ---
+04:35:55 UTC — remote-console executed:
+seed
+--- console tail ---
+[04:33:15 INFO]: Loading 0 persistent chunks for world 'minecraft:the_end'...
+[04:33:15 INFO]: Preparing spawn area: 100%
+[04:33:15 INFO]: Prepared spawn area in 238 ms
+[04:33:15 INFO]: Done preparing level "world" (8.920s)
+[04:33:15 INFO]: [spark] The spark plugin has been preferred but was not loaded. The bundled spark profiler will enabled instead.
+[04:33:15 INFO]: [spark] The spark profiler will not be enabled because it is currently disabled in the configuration.
+[04:33:15 INFO]: Done (18.492s)! For help, type "help"
+[04:35:51 INFO]: Seed: [712262452098460]
