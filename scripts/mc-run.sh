@@ -153,6 +153,7 @@ show-max-players = 100
 online-mode = false
 player-info-forwarding-mode = "modern"
 forwarding-secret-file = "forwarding.secret"
+force-key-authentication = false
 
 [servers]
 folia = "127.0.0.1:25566"
@@ -169,17 +170,19 @@ compression-threshold = 256
 enabled = false
 EOF
 
-  # Minekube Connect tunnel config (env placeholders resolved by the plugin)
+  # Minekube Connect tunnel config — bash expands ${ENDPOINT} at write time
+  # (same as the old spigot setup; the plugin does NOT resolve placeholders)
   cat > "$VEL/plugins/connect/config.yml" <<EOF
-endpoint: \${ENDPOINT}
+endpoint: ${ENDPOINT}
 allow-offline-mode-players: true
 metrics:
   disabled: true
   uuid: 00000000-0000-0000-0000-000000000001
 EOF
-  export CONNECT_TOKEN
   beacon "$(date -u +%H:%M:%S) UTC — fresh install written (folia+velocity+connect)"
 fi
+# CONNECT_TOKEN must be exported regardless of fresh-install vs snapshot restore
+export CONNECT_TOKEN
 
 # ------------------------------------------------------------- 4. Start stack
 cd "$SRV"
@@ -222,8 +225,8 @@ for i in $(seq 1 24); do
 done
 sleep 30
 beacon "$(date -u +%H:%M:%S) UTC — SERVER UP (Folia survival via Velocity)
---- connect lines ---
-$(grep -iE 'connect|minekube|endpoint|registered' "$WORK/velocity.log" | tail -15)
+--- velocity.log tail ---
+$(tail -25 "$WORK/velocity.log")
 --- folia errors ---
 $(grep -iE 'error|exception|severe' "$WORK/console.log" | tail -8)"
 
