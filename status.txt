@@ -1,1 +1,1 @@
-01:23:06 UTC — snapshot restored 160M
+01:23:07 UTC — folia starting (survival, offline, 25566)
