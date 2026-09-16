@@ -1,11 +1,1 @@
-08:34:54 UTC — remote-console executed:
-seed
---- console tail ---
-[08:32:15 INFO]: Loading 0 persistent chunks for world 'minecraft:the_end'...
-[08:32:15 INFO]: Preparing spawn area: 100%
-[08:32:15 INFO]: Prepared spawn area in 13 ms
-[08:32:15 INFO]: Done preparing level "world" (0.660s)
-[08:32:15 INFO]: [spark] The spark plugin has been preferred but was not loaded. The bundled spark profiler will enabled instead.
-[08:32:15 INFO]: [spark] The spark profiler will not be enabled because it is currently disabled in the configuration.
-[08:32:15 INFO]: Done (10.588s)! For help, type "help"
-[08:34:50 INFO]: Seed: [712262452098460]
+13:42:46 UTC — snapshot built 231M, rotating release
