@@ -1,1 +1,23 @@
-07:15:48 UTC — folia starting (survival, offline, 25566)
+07:18:29 UTC — SERVER UP (Folia survival via Velocity)
+--- velocity.log tail ---
+2026-09-18T07:15:59.456763442Z main WARN Advanced terminal features are not available in this environment
+[07:15:59 INFO]: Booting up Velocity 4.1.1...
+[07:15:59 INFO]: Connections will use epoll channels, libdeflate (Linux x86_64) compression, OpenSSL 3.x.x (Linux x86_64) ciphers
+[07:15:59 WARN]: The proxy is running in offline mode! This is a security risk and you will NOT receive any support!
+[07:15:59 ERROR]: Can't parse your MOTD
+net.kyori.adventure.text.minimessage.internal.parser.ParsingExceptionImpl: Legacy formatting codes have been detected in a MiniMessage string - this is unsupported behaviour. Please refer to the Adventure documentation (https://docs.papermc.io/adventure/) for more information.
+	Shadows In The Dark §7— Survival
+	                    ^^
+	at net.kyori.adventure.text.minimessage.internal.parser.TokenParser.parseString(TokenParser.java:169) ~[velocity.jar:4.1.1]
+	at net.kyori.adventure.text.minimessage.internal.parser.TokenParser.resolvePreProcessTags(TokenParser.java:111) ~[velocity.jar:4.1.1]
+	at net.kyori.adventure.text.minimessage.MiniMessageParser.parseToTree(MiniMessageParser.java:176) ~[velocity.jar:4.1.1]
+	at net.kyori.adventure.text.minimessage.MiniMessageParser.parseFormat(MiniMessageParser.java:190) ~[velocity.jar:4.1.1]
+	at net.kyori.adventure.text.minimessage.MiniMessageImpl.deserialize(MiniMessageImpl.java:91) ~[velocity.jar:4.1.1]
+	at net.kyori.adventure.text.minimessage.MiniMessageImpl.deserialize(MiniMessageImpl.java:43) ~[velocity.jar:4.1.1]
+	at com.velocitypowered.proxy.config.VelocityConfiguration.getMotd(VelocityConfiguration.java:287) ~[velocity.jar:4.1.1]
+	at com.velocitypowered.proxy.config.VelocityConfiguration.validate(VelocityConfiguration.java:212) ~[velocity.jar:4.1.1]
+	at com.velocitypowered.proxy.VelocityServer.doStartupConfigLoad(VelocityServer.java:409) ~[velocity.jar:4.1.1]
+	at com.velocitypowered.proxy.VelocityServer.start(VelocityServer.java:293) ~[velocity.jar:4.1.1]
+	at com.velocitypowered.proxy.Velocity.main(Velocity.java:71) ~[velocity.jar:4.1.1]
+[07:15:59 ERROR]: Your configuration is invalid. Velocity will not start up until the errors are resolved.
+--- folia errors ---
