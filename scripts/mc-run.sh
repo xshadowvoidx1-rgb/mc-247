@@ -160,7 +160,9 @@ EOF
   cat > "$VEL/velocity.toml" <<EOF
 config-version = "2.7"
 bind = "0.0.0.0:25565"
-motd = "Shadows In The Dark §7— Survival"
+# Velocity 4.x parses motd as MiniMessage — legacy § codes are a hard config
+# error ("Velocity will not start up until the errors are resolved").
+motd = "Shadows In The Dark <gray>— Survival"
 show-max-players = 100
 online-mode = false
 player-info-forwarding-mode = "modern"
