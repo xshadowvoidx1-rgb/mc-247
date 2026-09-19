@@ -201,6 +201,22 @@ metrics:
   uuid: 00000000-0000-0000-0000-000000000001
 EOF
 beacon "$(date -u +%H:%M:%S) UTC — configs written (folia+velocity+connect)"
+
+# ------------------------------- 3c. Proxy plugins (ViaVersion/ViaBackwards)
+# Version translation belongs on the PROXY: Velocity rewrites old-client packets
+# up to 1.21.11 before they reach Folia, so the backend stays stock. Guarded
+# independently of server.jar — a snapshot restore carries $VEL, but a plugin
+# added after that snapshot was taken still has to be fetched once.
+for spec in \
+  "ViaVersion.jar|https://cdn.modrinth.com/data/P1OZGk5p/versions/FaishMnD/ViaVersion-5.12.0.jar" \
+  "ViaBackwards.jar|https://cdn.modrinth.com/data/NpvuJQoq/versions/SxGhdsPK/ViaBackwards-5.12.0.jar"
+do
+  vname="${spec%%|*}"; vurl="${spec#*|}"
+  [ -f "$VEL/plugins/$vname" ] && continue
+  log "downloading $vname"
+  curl -sfL -o "$VEL/plugins/$vname" "$vurl" \
+    || { beacon "$(date -u +%H:%M:%S) UTC — FATAL: $vname download failed"; exit 1; }
+done
 # CONNECT_TOKEN must be exported regardless of fresh-install vs snapshot restore
 export CONNECT_TOKEN
 
