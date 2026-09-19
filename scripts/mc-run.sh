@@ -25,6 +25,18 @@ FORWARD_SECRET="${FORWARD_SECRET:-wahid-survival-2026}"
 log() { echo "[$(date -u +%H:%M:%S)] $*"; }
 gh_api() { curl -s -H "Authorization: token $GH_PAT" -H "Accept: application/vnd.github+json" "$@"; }
 
+# Diagnostics channel — a SEPARATE repo file (velocity-status.txt) that is
+# overwritten only by explicit diag() calls, so it survives the status.txt
+# beacon churn and can be read while the server is running.
+diag() {
+  local body msg_sha
+  msg_sha="$(gh_api "$API/repos/$REPO/contents/velocity-status.txt" | jq -r '.sha // empty')"
+  body="{\"message\":\"velocity diag\",\"content\":\"$(printf '%s' "$1" | base64 -w0)\""
+  [ -n "$msg_sha" ] && body="$body,\"sha\":\"$msg_sha\""
+  body="$body}"
+  gh_api -X PUT "$API/repos/$REPO/contents/velocity-status.txt" -d "$body" >/dev/null || true
+}
+
 # Live status beacon — push milestone text to repo file status.txt so the
 # operator can watch the boot in real time (job logs are unreadable mid-run).
 beacon() {
@@ -222,12 +234,31 @@ $(tail -c 4000 "$WORK/console.log")"
 log "FOLIA IS UP"
 
 start_velocity
-# give Connect a minute to register the tunnel, then beacon what it logged
+# give Connect time to register the tunnel, then write a full diagnostic dump
+# to velocity-status.txt (status.txt is too transient to debug from).
 for i in $(seq 1 24); do
-  grep -qi 'registered\|tunnel\|endpoint' "$WORK/velocity.log" 2>/dev/null && break
+  grep -qi 'registered\|tunnel\|endpoint\|error\|exception\|fail' "$WORK/velocity.log" 2>/dev/null && break
   sleep 5
 done
 sleep 30
+diag "$(date -u +%H:%M:%S) UTC — velocity diag
+=== env ===
+CONNECT_TOKEN set: $([ -n "${CONNECT_TOKEN:-}" ] && echo yes || echo NO)
+ENDPOINT: ${ENDPOINT:-<unset>}
+=== $VEL layout ===
+$(ls -la "$VEL" 2>&1 | head -20)
+--- plugins/ ---
+$(ls -la "$VEL/plugins" 2>&1 | head -20)
+--- plugins/connect/ ---
+$(ls -la "$VEL/plugins/connect" 2>&1 | head -20)
+=== plugins/connect/config.yml ===
+$(cat "$VEL/plugins/connect/config.yml" 2>&1)
+=== velocity.toml (key lines) ===
+$(grep -vE '^\s*#|^\s*$' "$VEL/velocity.toml" 2>&1 | head -25)
+=== port 25565 listening? ===
+$(ss -ltnp 2>/dev/null | grep -E '25565|25566' || echo 'ss unavailable')
+=== velocity.log (full) ===
+$(cat "$WORK/velocity.log" 2>&1 | tail -60)"
 beacon "$(date -u +%H:%M:%S) UTC — SERVER UP (Folia survival via Velocity)
 --- velocity.log tail ---
 $(tail -25 "$WORK/velocity.log")
@@ -288,6 +319,15 @@ while :; do
   [ "$now" -ge "$HANDOVER_AT" ] && { log "handover window reached"; break; }
   [ "$now" -ge "$HARDRAIL_AT" ] && { log "HARD RAIL — forcing handover"; break; }
   check_remote_console
+  # every ~5 min refresh the diag so post-boot tunnel failures stay visible
+  now2=$(date +%s)
+  if [ $(( now2 - ${LAST_DIAG:-0} )) -ge 300 ]; then
+    LAST_DIAG=$now2
+    diag "$(date -u +%H:%M:%S) UTC — velocity diag (running)
+registered: $(grep -ciE 'registered|tunnel' "$WORK/velocity.log" 2>/dev/null || echo 0) matching lines
+=== velocity.log (tail 40) ===
+$(tail -40 "$WORK/velocity.log" 2>&1)"
+  fi
   check_handover_trigger && { log "remote handover triggered"; break; }
   sleep 20
 done
