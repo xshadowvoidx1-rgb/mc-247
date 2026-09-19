@@ -282,9 +282,20 @@ $(grep -vE '^\s*#|^\s*$' "$VEL/velocity.toml" 2>&1 | head -25)
 === port 25565 listening? ===
 $(ss -ltnp 2>/dev/null | grep -E '25565|25566' || echo 'ss unavailable')
 === local login probe (bypasses the edge) ===
-$(python3 "$REPO_DIR/scripts/probe-login.py" 2>&1 | tail -20)
-=== backend connections (ss) ===
-$(ss -tnp 2>/dev/null | grep -E '25566' || echo none)
+$( { python3 "$REPO_DIR/scripts/probe-login.py" > "$WORK/probe.out" 2>&1 &
+      PB=$!
+      : > "$WORK/ss.out"
+      while kill -0 "$PB" 2>/dev/null; do
+        ss -tnp 2>/dev/null | grep -E '127\.0\.0\.1:25566' >> "$WORK/ss.out"
+        sleep 0.7
+      done
+      wait "$PB"
+      cat "$WORK/probe.out"
+      echo "--- backend sockets observed WHILE the probe was pending ---"
+      sort -u "$WORK/ss.out" | grep . || echo "NEVER CONNECTED to the backend at any point"
+    } 2>&1)
+=== $SRV/logs/latest.log (tail 25) ===
+$(tail -25 "$SRV/logs/latest.log" 2>&1)
 === $VEL/logs/latest.log (tail 30) ===
 $(tail -30 "$VEL/logs/latest.log" 2>&1)
 === velocity.log (full) ===
