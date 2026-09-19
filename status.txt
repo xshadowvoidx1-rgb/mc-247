@@ -1,28 +1,11 @@
-10:16:58 UTC — SERVER UP (Folia survival via Velocity)
---- velocity.log tail ---
-[10:16:24 INFO] [connect]: Took 701ms to boot Connect
-[10:16:24 INFO]: Loaded plugin connect 0.15.13 by Minekube
-[10:16:24 INFO]: Loaded plugin viaversion 5.12.0 by _MylesC, creeper123123321, Gerrygames, kennytv, Matsv, EnZaXD, RK_01
-[10:16:24 INFO]: Loaded plugin viabackwards 5.12.0 by Matsv, kennytv, Gerrygames, creeper123123321, ForceUpdate1, EnZaXD
-[10:16:24 INFO]: Loaded 4 plugins
-[10:16:24 WARN]: The server channel initializer has been replaced by java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
-[10:16:24 INFO] [connect]: Endpoint name: shadowsinthedark
-[10:16:24 INFO] [connect]: Your public address: shadowsinthedark.play.minekube.net
-[10:16:25 INFO] [connect]: Started watching for new player sessions
-[10:16:25 INFO] [viaversion]: Replacing channel initializers; you can safely ignore the following two warnings.
-[10:16:25 WARN]: The server channel initializer has been replaced by java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
-[10:16:25 WARN]: The backend channel initializer has been replaced by java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
-[10:16:25 INFO] [viabackwards]: Loading translations...
-[10:16:25 INFO] [viabackwards]: Registering protocols...
-[10:16:25 INFO] [viaversion]: ViaVersion detected lowest supported version by the proxy: 1.13 (393)
-[10:16:25 INFO] [viaversion]: Highest supported version by the proxy: 26.2 (776)
-[10:16:25 INFO]: Listening on /[0:0:0:0:0:0:0:0]:25565
-[10:16:25 INFO]: Velocity and some of its plugins collect metrics and send them to bStats (https://bStats.org).
-[10:16:25 INFO]: bStats collects some basic information for plugin authors, like how many people use
-[10:16:25 INFO]: their plugin and their total player count. It's recommended to keep bStats enabled, but
-[10:16:25 INFO]: if you're not comfortable with this, you can opt-out by editing the config.txt file in
-[10:16:25 INFO]: the '/plugins/bStats/' folder and setting enabled to false.
-[10:16:25 INFO]: Done (2.87s)!
-[10:16:26 INFO] [viaversion]: Finished mapping loading, shutting down loader executor.
-[10:16:57 INFO]: [connected player] DiagProbe (/127.0.0.1:55874) has connected
---- folia errors ---
+10:17:03 UTC — remote-console executed:
+list
+--- console tail ---
+[10:16:17 INFO]: Loading 0 persistent chunks for world 'minecraft:the_end'...
+[10:16:17 INFO]: Preparing spawn area: 100%
+[10:16:17 INFO]: Prepared spawn area in 22 ms
+[10:16:17 INFO]: Done preparing level "world" (0.666s)
+[10:16:17 INFO]: [spark] The spark plugin has been preferred but was not loaded. The bundled spark profiler will enabled instead.
+[10:16:17 INFO]: [spark] The spark profiler will not be enabled because it is currently disabled in the configuration.
+[10:16:17 INFO]: Done (9.465s)! For help, type "help"
+[10:16:59 INFO]: There are 0 of a max of 100 players online: 
