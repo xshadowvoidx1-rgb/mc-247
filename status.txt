@@ -1,11 +1,1 @@
-10:14:05 UTC — remote-console executed:
-list
---- console tail ---
-[10:07:49 INFO]: Preparing spawn area: 100%
-[10:07:49 INFO]: Prepared spawn area in 21 ms
-[10:07:49 INFO]: Done preparing level "world" (0.650s)
-[10:07:49 INFO]: [spark] The spark plugin has been preferred but was not loaded. The bundled spark profiler will enabled instead.
-[10:07:49 INFO]: [spark] The spark profiler will not be enabled because it is currently disabled in the configuration.
-[10:07:49 INFO]: Done (9.248s)! For help, type "help"
-[10:08:27 INFO]: Seed: [712262452098460]
-[10:14:01 INFO]: There are 0 of a max of 100 players online: 
+10:16:00 UTC — JRE ready (openjdk version "26.0.2.1" 2026-08-18)
