@@ -281,6 +281,12 @@ $(cat "$VEL/plugins/connect/config.yml" 2>&1)
 $(grep -vE '^\s*#|^\s*$' "$VEL/velocity.toml" 2>&1 | head -25)
 === port 25565 listening? ===
 $(ss -ltnp 2>/dev/null | grep -E '25565|25566' || echo 'ss unavailable')
+=== local login probe (bypasses the edge) ===
+$(python3 "$REPO_DIR/scripts/probe-login.py" 2>&1 | tail -20)
+=== backend connections (ss) ===
+$(ss -tnp 2>/dev/null | grep -E '25566' || echo none)
+=== $VEL/logs/latest.log (tail 30) ===
+$(tail -30 "$VEL/logs/latest.log" 2>&1)
 === velocity.log (full) ===
 $(cat "$WORK/velocity.log" 2>&1 | tail -60)"
 beacon "$(date -u +%H:%M:%S) UTC — SERVER UP (Folia survival via Velocity)
