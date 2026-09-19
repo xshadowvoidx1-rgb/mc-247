@@ -109,6 +109,13 @@ if [ ! -f "$SRV/server.jar" ]; then
   curl -sfL -o "$VEL/plugins/connect-velocity.jar" \
     "https://github.com/minekube/connect-java/releases/download/0.15.13/connect-velocity.jar" \
     || { beacon "$(date -u +%H:%M:%S) UTC — FATAL: connect-velocity jar download failed"; exit 1; }
+fi
+
+# ------------------------------------------- 3b. Configs (EVERY boot)
+# The release snapshot archives $SRV *and* $VEL, so a config written once on a
+# fresh install gets restored forever — including a broken one. Rewrite all of
+# them on every boot so the script, not the snapshot, is the source of truth.
+mkdir -p "$SRV/config" "$VEL/plugins/connect"
 
   # Folia backend: survival, offline, behind velocity (port 25566)
   cat > "$SRV/server.properties" <<EOF
@@ -193,8 +200,7 @@ metrics:
   disabled: true
   uuid: 00000000-0000-0000-0000-000000000001
 EOF
-  beacon "$(date -u +%H:%M:%S) UTC — fresh install written (folia+velocity+connect)"
-fi
+beacon "$(date -u +%H:%M:%S) UTC — configs written (folia+velocity+connect)"
 # CONNECT_TOKEN must be exported regardless of fresh-install vs snapshot restore
 export CONNECT_TOKEN
 
