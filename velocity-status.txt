@@ -1,15 +1,6 @@
-10:42:10 UTC — velocity diag (running)
-registered: 0
-0 matching lines
+10:47:15 UTC — velocity diag (running)
+registered: 2 matching lines
 === velocity.log (tail 40) ===
-[07:28:08 INFO]: Connections will use epoll channels, libdeflate (Linux x86_64) compression, OpenSSL 3.x.x (Linux x86_64) ciphers
-[07:28:08 WARN]: The proxy is running in offline mode! This is a security risk and you will NOT receive any support!
-[07:28:08 INFO]: Loading localizations...
-[07:28:08 INFO]: Loading plugins...
-WARNING: Final field id in class com.velocitypowered.api.plugin.ap.SerializedPluginDescription has been mutated reflectively by class com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$2 in unnamed module @530612ba (file:/home/runner/mc/velocity/velocity.jar)
-WARNING: Use --enable-final-field-mutation=ALL-UNNAMED to avoid a warning
-WARNING: Mutating final fields will be blocked in a future release unless final field mutation is enabled
-WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
 WARNING: sun.misc.Unsafe::staticFieldBase has been called by com.google.inject.internal.aop.HiddenClassDefiner (file:/home/runner/mc/velocity/velocity.jar)
 WARNING: Please consider reporting this to the maintainers of class com.google.inject.internal.aop.HiddenClassDefiner
 WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
@@ -42,3 +33,11 @@ WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
 [10:04:51 INFO] [connect]: Started watching for new player sessions
 [10:41:41 INFO]: [connected player] akak (/172.16.42.210:0) has connected
 [10:41:41 INFO]: [server connection] akak -> folia has connected
+[10:43:07 INFO]: [connected player] akak (/172.16.42.210:0) has disconnected
+[10:43:07 INFO] [connect]: Connect tunneled player akak disconnected
+[10:43:07 INFO]: [server connection] akak -> folia has disconnected
+[10:46:34 INFO]: [connected player] akak (/172.16.92.66:0) has connected
+[10:46:34 INFO]: [server connection] akak -> folia has connected
+[10:46:42 INFO] [connect]: Connect tunneled player akak disconnected
+[10:46:42 INFO]: [connected player] akak (/172.16.92.66:0) has disconnected
+[10:46:42 INFO]: [server connection] akak -> folia has disconnected
