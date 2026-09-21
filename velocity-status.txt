@@ -1,12 +1,6 @@
-16:23:01 UTC — velocity diag (running)
-registered: 0
-0 matching lines
+16:28:11 UTC — velocity diag (running)
+registered: 1 matching lines
 === velocity.log (tail 40) ===
-WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
-WARNING: sun.misc.Unsafe::staticFieldBase has been called by com.google.inject.internal.aop.HiddenClassDefiner (file:/home/runner/mc/velocity/velocity.jar)
-WARNING: Please consider reporting this to the maintainers of class com.google.inject.internal.aop.HiddenClassDefiner
-WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
-[11:48:38 WARN] [connect]: en_ is not a supported language.
 [11:48:38 INFO] [connect]: Took 574ms to boot Connect
 [11:48:38 INFO]: Loaded plugin connect 0.15.13 by Minekube
 [11:48:38 INFO]: Loaded plugin viaversion 5.12.0 by _MylesC, creeper123123321, Gerrygames, kennytv, Matsv, EnZaXD, RK_01
@@ -42,3 +36,8 @@ WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
 [13:53:59 ERROR] [connect]: Connection error with WatchService: java.lang.RuntimeException: Watch closed with code 1012: restarting
 [13:53:59 INFO] [connect]: Trying to reconnect in 0.672s...
 [13:54:01 INFO] [connect]: Started watching for new player sessions
+[16:24:27 INFO]: [connected player] Itay250 (/172.16.55.162:0) has connected
+[16:24:27 INFO]: [server connection] Itay250 -> folia has connected
+[16:25:47 INFO]: [connected player] Itay250 (/172.16.55.162:0) has disconnected
+[16:25:47 INFO] [connect]: Connect tunneled player Itay250 disconnected
+[16:25:47 INFO]: [server connection] Itay250 -> folia has disconnected
