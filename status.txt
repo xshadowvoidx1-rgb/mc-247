@@ -1,28 +1,11 @@
-17:01:11 UTC — SERVER UP (Folia survival via Velocity)
---- velocity.log tail ---
-WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
-[17:00:11 WARN] [connect]: en_ is not a supported language.
-[17:00:11 INFO] [connect]: Took 683ms to boot Connect
-[17:00:11 INFO]: Loaded plugin connect 0.15.13 by Minekube
-[17:00:11 INFO]: Loaded plugin viaversion 5.12.0 by _MylesC, creeper123123321, Gerrygames, kennytv, Matsv, EnZaXD, RK_01
-[17:00:11 INFO]: Loaded plugin viabackwards 5.12.0 by Matsv, kennytv, Gerrygames, creeper123123321, ForceUpdate1, EnZaXD
-[17:00:11 INFO]: Loaded 4 plugins
-[17:00:11 WARN]: The server channel initializer has been replaced by java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
-[17:00:11 INFO] [connect]: Endpoint name: shadowsinthedark
-[17:00:11 INFO] [connect]: Your public address: shadowsinthedark.play.minekube.net
-[17:00:12 INFO] [connect]: Started watching for new player sessions
-[17:00:12 INFO] [viaversion]: Replacing channel initializers; you can safely ignore the following two warnings.
-[17:00:12 WARN]: The server channel initializer has been replaced by java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
-[17:00:12 WARN]: The backend channel initializer has been replaced by java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
-[17:00:12 INFO] [viabackwards]: Loading translations...
-[17:00:12 INFO] [viabackwards]: Registering protocols...
-[17:00:12 INFO] [viaversion]: ViaVersion detected lowest supported version by the proxy: 1.13 (393)
-[17:00:12 INFO] [viaversion]: Highest supported version by the proxy: 26.2 (776)
-[17:00:12 INFO]: Listening on /[0:0:0:0:0:0:0:0]:25565
-[17:00:12 INFO]: Done (2.76s)!
-[17:00:13 INFO] [viaversion]: Finished mapping loading, shutting down loader executor.
-[17:00:44 INFO]: [connected player] DiagProbe (/127.0.0.1:35574) has connected
-[17:00:44 INFO]: [server connection] DiagProbe -> folia has connected
-[17:01:09 INFO]: [connected player] DiagProbe (/127.0.0.1:35574) has disconnected
-[17:01:09 INFO]: [server connection] DiagProbe -> folia has disconnected
---- folia errors ---
+17:01:16 UTC — remote-console executed:
+list
+--- console tail ---
+[17:00:04 INFO]: Prepared spawn area in 26 ms
+[17:00:04 INFO]: Done preparing level "world" (0.851s)
+[17:00:04 INFO]: [spark] The spark plugin has been preferred but was not loaded. The bundled spark profiler will enabled instead.
+[17:00:04 INFO]: [spark] The spark profiler will not be enabled because it is currently disabled in the configuration.
+[17:00:04 INFO]: Done (9.436s)! For help, type "help"
+[17:00:44 INFO]: UUID of player DiagProbe is 50054ea4-9f67-32ed-bf0d-4f13b9c5e155
+[17:01:09 INFO]: DiagProbe (50054ea4-9f67-32ed-bf0d-4f13b9c5e155) lost connection: Disconnected
+[17:01:12 INFO]: There are 0 of a max of 100 players online: 
