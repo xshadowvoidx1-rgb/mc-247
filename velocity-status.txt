@@ -1,4 +1,4 @@
-06:57:47 UTC — velocity diag (running)
+07:02:53 UTC — velocity diag (running)
 registered: 1 matching lines
 === velocity.log (tail 40) ===
 [04:26:05 INFO]: [connected player] Yakiishi (/172.16.42.210:0) has disconnected: 接続中に内部エラーが発生しました。
