@@ -1,11 +1,7 @@
-08:57:57 UTC — velocity diag (running)
+09:03:06 UTC — velocity diag (running)
 registered: 0
 0 matching lines
 === velocity.log (tail 40) ===
-2026-09-23T05:20:39.147569928Z main WARN Advanced terminal features are not available in this environment
-[05:20:39 INFO]: Booting up Velocity 4.1.1...
-[05:20:39 INFO]: Connections will use epoll channels, libdeflate (Linux x86_64) compression, OpenSSL 3.x.x (Linux x86_64) ciphers
-[05:20:39 WARN]: The proxy is running in offline mode! This is a security risk and you will NOT receive any support!
 [05:20:39 INFO]: Loading localizations...
 [05:20:40 INFO]: Loading plugins...
 WARNING: Final field id in class com.velocitypowered.api.plugin.ap.SerializedPluginDescription has been mutated reflectively by class com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$2 in unnamed module @530612ba (file:/home/runner/mc/velocity/velocity.jar)
@@ -42,3 +38,7 @@ WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
 [08:41:20 ERROR] [connect]: Connection error with WatchService: java.net.SocketException: Connection reset
 [08:41:20 INFO] [connect]: Trying to reconnect in 1.358s...
 [08:41:22 INFO] [connect]: Started watching for new player sessions
+[08:58:51 INFO]: [connected player] _venomX12 (/172.16.33.250:0) has connected
+[08:58:51 INFO]: [server connection] _venomX12 -> folia has connected
+[08:59:02 INFO]: [connected player] _venomX12 (/172.16.33.250:0) has disconnected
+[08:59:02 INFO]: [server connection] _venomX12 -> folia has disconnected
