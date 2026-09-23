@@ -1,13 +1,262 @@
-00:02:32 UTC — velocity diag (running)
-registered: 0
-0 matching lines
-=== velocity.log (tail 40) ===
-2026-09-22T18:57:29.485953454Z main WARN Advanced terminal features are not available in this environment
-[18:57:29 INFO]: Booting up Velocity 4.1.1...
-[18:57:29 INFO]: Connections will use epoll channels, libdeflate (Linux x86_64) compression, OpenSSL 3.x.x (Linux x86_64) ciphers
-[18:57:30 WARN]: The proxy is running in offline mode! This is a security risk and you will NOT receive any support!
-[18:57:30 INFO]: Loading localizations...
-[18:57:30 INFO]: Loading plugins...
+00:09:40 UTC — velocity diag
+=== env ===
+CONNECT_TOKEN set: yes
+ENDPOINT: shadowsinthedark
+=== /home/runner/mc/velocity layout ===
+total 41068
+drwxr-xr-x 5 runner runner     4096 Sep 23 00:09 .
+drwxr-xr-x 5 runner runner     4096 Sep 23 00:09 ..
+-rw-r--r-- 1 runner runner       19 Sep 23 00:08 forwarding.secret
+drwxr-xr-x 2 runner runner     4096 Sep 19 10:42 lang
+drwxr-xr-x 2 runner runner     4096 Sep 23 00:09 logs
+drwxr-xr-x 6 runner runner     4096 Sep 19 10:42 plugins
+-rw-r--r-- 1 runner runner 42022458 Sep 14 04:37 velocity.jar
+-rw-r--r-- 1 runner runner     1251 Sep 23 00:09 velocity.toml
+--- plugins/ ---
+total 63784
+drwxr-xr-x 6 runner runner     4096 Sep 19 10:42 .
+drwxr-xr-x 5 runner runner     4096 Sep 23 00:09 ..
+-rw-r--r-- 1 runner runner  1430897 Sep 19 10:41 ViaBackwards.jar
+-rw-r--r-- 1 runner runner  6503775 Sep 19 10:41 ViaVersion.jar
+drwxr-xr-x 2 runner runner     4096 Sep 19 10:42 bStats
+drwxr-xr-x 2 runner runner     4096 Sep 14 04:37 connect
+-rw-r--r-- 1 runner runner 57351803 Sep 14 04:37 connect-velocity.jar
+drwxr-xr-x 2 runner runner     4096 Sep 19 10:42 viabackwards
+drwxr-xr-x 2 runner runner     4096 Sep 19 10:42 viaversion
+--- plugins/connect/ ---
+total 16
+drwxr-xr-x 2 runner runner 4096 Sep 14 04:37 .
+drwxr-xr-x 6 runner runner 4096 Sep 19 10:42 ..
+-rw-r--r-- 1 runner runner 5705 Sep 23 00:09 config.yml
+=== plugins/connect/config.yml ===
+# The endpoint name of this server/proxy instance registered on startup with the Connect network.
+# Default is a random string. You can change it to a custom endpoint name.
+endpoint: "shadowsinthedark"
+
+# This setting is only relevant if you want to allow cracked players to join.
+# If left blank, the correct mode will be securely detected automatically.
+allow-offline-mode-players: true
+
+# The default locale for Connect. By default, Connect uses the system locale
+#default-locale: en_US
+
+# Optional parent endpoint names sent to WatchService as Connect-Endpoint-Parents.
+# This plugin does not expose a public endpoint-control API.
+#
+# You can add as many super endpoint names as you want.
+#super-endpoints:
+#  - pvp-endpoint
+#  - someones-hub
+
+# Connect authenticates tunneled players at its edge and tells the proxy to skip its own
+# online-mode handshake for them. Login/auth plugins (LibreLogin, AuthMe, nLogin, ...) that
+# force online mode for every connection later in the same login event revert that decision,
+# and the player then hangs forever on "Logging in..." because there is no second Mojang
+# session to answer the proxy's encryption request.
+#
+# With this enabled, Connect re-asserts its own decision after every other plugin has run.
+# It only ever acts on connections Connect itself authenticated, it never overrides another
+# plugin's kick, and it does nothing when nobody changed the decision.
+login-reassert:
+  # Turn this off if you deliberately want another plugin to be able to change Connect's own
+  # login decision. Off restores the previous behaviour: last writer wins, no floor.
+  enabled: true
+
+  # Also restore Connect's full game profile - the player's Mojang UUID and username - and
+  # not just the skin properties.
+  #
+  # PREREQUISITE, read before enabling: only turn this on if every login plugin on this proxy
+  # keys its own database on the player's Mojang UUID. For LibreLogin that means setting
+  # `new-uuid-creator: MOJANG` in LibreLogin's config first. With its default `CRACKED` it
+  # stores players under an offline UUID derived from the name, so restoring the Mojang UUID
+  # makes its own lookups miss and its join handlers throw on every login.
+  #
+  # Leave this off unless you need ConnectApi.isConnectPlayer(uuid) / getPlayer(uuid) to
+  # resolve for players who go through such a login plugin. The default (skin properties
+  # only) fixes the login hang and the missing skin while keeping those plugins consistent.
+  #
+  # On BungeeCord there is no profile-properties API at pre-login, so `enabled` re-asserts
+  # offline mode only and this option is what additionally re-asserts the UUID and username.
+  restore-full-profile: false
+
+# Connect Edge signs Bedrock/Xbox identity envelopes. This plugin trusts them by default
+# because it fetches Minekube's verifier key over HTTPS from the authoritative metadata URL.
+# The verifier rejects metadata URLs with userinfo/fragments and never follows redirects.
+# Warn mode verifies and logs but never rejects; Java-only servers have no Bedrock sessions
+# to verify, so this default does not weaken or change their admission behavior.
+bedrock-identity:
+  # disabled: do not verify or reject
+  # warn: verify when any key source is configured and log failures, but allow the session
+  # require: reject Bedrock sessions with missing or invalid identity envelopes
+  # Values are exact; malformed identity settings never advertise trusted identity.
+  enforcement: warn
+  # To pin your own Ed25519 key, clear metadata-url and set public-key/public-keys.
+  # Static keys are used only when metadata-url is empty.
+  # Supports raw 32-byte and X.509 encoded keys after decoding.
+  public-key: ""
+  # Additional Base64-encoded Ed25519 keys used only when metadata-url is empty.
+  public-keys: []
+  # Authoritative exact HTTPS metadata URL for Moxy verifier keys.
+  # Userinfo, fragments, and redirects are rejected; static keys are not a fallback.
+  metadata-url: "https://watch-connect.minekube.net/.well-known/minekube-connect/bedrock-identity-keys.json"
+  # Maximum seconds to cache successful metadata; a smaller published max-age takes precedence.
+  metadata-cache-seconds: 300
+  # Hard stale-if-error bound for expired remote keys. Require mode fails closed after this.
+  metadata-max-stale-seconds: 600
+  # Required non-blank issuer expected in Moxy metadata and signed envelopes.
+  expected-issuer: minekube-connect
+  # Required exact policy: linked_java_only or trusted_bedrock_xuid.
+  expected-policy: trusted_bedrock_xuid
+
+# Signed Bedrock principal v2 is additive to the legacy identity path above. New generated
+# configurations require it; files created before this section existed remain generation 0,
+# preserve their legacy behavior, and never advertise v2 until explicitly upgraded.
+bedrock-principal:
+  config-generation: 0
+  mode: warn
+  issuer: minekube-connect
+  trust-domain: urn:minekube:connect:production
+  audience: urn:minekube:connect:bedrock-principal:v2
+  metadata-origin: https://connect.minekube.com
+  metadata-path: /.well-known/minekube-connect/bedrock-principal-v2.json
+  public-keys: {}
+
+# bStats is a stat tracker that is entirely anonymous and tracks only basic information
+# about Connect, such as how many people are online, how many servers are using Connect,
+# what OS is being used, etc. You can learn more about bStats here: https://bstats.org/.
+metrics:
+  # If metrics should be disabled.
+  disabled: true
+  # The unique id that should be consistent for a server/proxy.
+  uuid: "00000000-0000-0000-0000-000000000001"
+
+# The legacy config file format remains version 1; v2 generation is controlled by
+# bedrock-principal.config-generation above.
+config-version: 1
+=== velocity.toml (key lines) ===
+config-version = "2.8"
+bind = "0.0.0.0:25565"
+motd = "Shadows In The Dark <gray>— Survival"
+show-max-players = 100
+online-mode = false
+player-info-forwarding-mode = "modern"
+forwarding-secret-file = "forwarding.secret"
+force-key-authentication = false
+forced-hosts = {}
+[servers]
+	folia = "127.0.0.1:25566"
+	try = ["folia"]
+[advanced]
+	compression-threshold = 256
+[query]
+	enabled = false
+[packet-limiter]
+	interval = 7
+	packets-per-second = -1
+	bytes-per-second = -1
+	decompressed-bytes-per-second = 5242880
+=== port 25565 listening? ===
+LISTEN 0      4096               *:25566            *:*    users:(("java",pid=2371,fd=143))
+LISTEN 0      4096               *:25565            *:*    users:(("java",pid=2526,fd=90)) 
+=== local login probe (bypasses the edge) ===
+t+  0.00s PROBE: connected to 127.0.0.1:25565
+t+  0.00s PROBE -> handshake(proto=776, state=2) + Login Start
+t+  0.05s PROBE <- Set Compression (threshold=256)
+t+  0.06s PROBE <- Login Success (sending Login Acknowledged, compressed framing)
+t+  0.18s PROBE <- packet id 0x01 len=33
+t+  0.19s PROBE <- packet id 0x0c len=19
+t+  0.19s PROBE <- packet id 0x0e len=24
+t+  1.22s PROBE <- packet id 0x04 len=8
+t+  2.27s PROBE <- packet id 0x04 len=8
+t+  3.32s PROBE <- packet id 0x04 len=8
+t+  4.37s PROBE <- packet id 0x04 len=8
+t+  5.37s PROBE <- packet id 0x04 len=8
+t+  6.37s PROBE <- packet id 0x04 len=8
+t+  7.37s PROBE <- packet id 0x04 len=8
+t+  8.37s PROBE <- packet id 0x04 len=8
+t+  9.42s PROBE <- packet id 0x04 len=8
+t+ 10.42s PROBE <- packet id 0x04 len=8
+t+ 11.47s PROBE <- packet id 0x04 len=8
+t+ 12.52s PROBE <- packet id 0x04 len=8
+t+ 13.57s PROBE <- packet id 0x04 len=8
+t+ 14.57s PROBE <- packet id 0x04 len=8
+t+ 15.62s PROBE <- packet id 0x04 len=8
+t+ 16.67s PROBE <- packet id 0x04 len=8
+t+ 17.72s PROBE <- packet id 0x04 len=8
+t+ 18.72s PROBE <- packet id 0x04 len=8
+t+ 19.77s PROBE <- packet id 0x04 len=8
+t+ 20.77s PROBE <- packet id 0x04 len=8
+t+ 21.82s PROBE <- packet id 0x04 len=8
+t+ 22.82s PROBE <- packet id 0x04 len=8
+t+ 23.82s PROBE <- packet id 0x04 len=8
+t+ 24.82s PROBE <- packet id 0x04 len=8
+t+ 25.82s PROBE <- packet id 0x04 len=8
+t+ 25.82s PROBE: done
+--- backend sockets observed WHILE the probe was pending ---
+NEVER CONNECTED to the backend at any point
+=== /home/runner/mc/server/logs/latest.log (tail 25) ===
+[00:09:04] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[00:09:04] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[00:09:04] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
+[00:09:04] [Server thread/WARN]: Whilst this makes it possible to use Velocity, unless access to your server is properly restricted, it also opens up the ability for hackers to connect with any username they choose.
+[00:09:04] [Server thread/WARN]: Please see https://docs.papermc.io/velocity/security for further information.
+[00:09:04] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
+[00:09:04] [Server thread/INFO]: Preparing level "world"
+[00:09:04] [Server thread/INFO]: Selecting spawn point for world 'minecraft:overworld'...
+[00:09:05] [Server thread/INFO]: Selecting spawn point for world 'minecraft:the_nether'...
+[00:09:05] [Server thread/INFO]: Selecting spawn point for world 'minecraft:the_end'...
+[00:09:05] [Server thread/INFO]: Loading 0 persistent chunks for world 'minecraft:overworld'...
+[00:09:05] [Server thread/INFO]: Preparing spawn area: 100%
+[00:09:05] [Server thread/INFO]: Prepared spawn area in 324 ms
+[00:09:05] [Server thread/INFO]: Loading 0 persistent chunks for world 'minecraft:the_nether'...
+[00:09:05] [Server thread/INFO]: Preparing spawn area: 100%
+[00:09:05] [Server thread/INFO]: Prepared spawn area in 88 ms
+[00:09:05] [Server thread/INFO]: Loading 0 persistent chunks for world 'minecraft:the_end'...
+[00:09:05] [Server thread/INFO]: Preparing spawn area: 100%
+[00:09:05] [Server thread/INFO]: Prepared spawn area in 15 ms
+[00:09:05] [Server thread/INFO]: Done preparing level "world" (0.681s)
+[00:09:05] [Server thread/INFO]: [spark] The spark plugin has been preferred but was not loaded. The bundled spark profiler will enabled instead.
+[00:09:05] [Server thread/INFO]: [spark] The spark profiler will not be enabled because it is currently disabled in the configuration.
+[00:09:05] [Server thread/INFO]: Done (9.549s)! For help, type "help"
+[00:09:40] [User Authenticator #0/INFO]: UUID of player DiagProbe is 50054ea4-9f67-32ed-bf0d-4f13b9c5e155
+[00:10:06] [Region Scheduler Thread #0/INFO]: DiagProbe (50054ea4-9f67-32ed-bf0d-4f13b9c5e155) lost connection: Disconnected
+=== /home/runner/mc/velocity/logs/latest.log (tail 30) ===
+[00:09:06] [main/INFO] [com.velocitypowered.proxy.VelocityServer]: Booting up Velocity 4.1.1...
+[00:09:06] [main/INFO] [com.velocitypowered.proxy.network.ConnectionManager]: Connections will use epoll channels, libdeflate (Linux x86_64) compression, OpenSSL 3.x.x (Linux x86_64) ciphers
+[00:09:06] [main/WARN] [com.velocitypowered.proxy.config.VelocityConfiguration]: The proxy is running in offline mode! This is a security risk and you will NOT receive any support!
+[00:09:06] [main/INFO] [com.velocitypowered.proxy.VelocityServer]: Loading localizations...
+[00:09:07] [main/INFO] [com.velocitypowered.proxy.VelocityServer]: Loading plugins...
+[00:09:07] [main/WARN] [connect]: en_ is not a supported language.
+[00:09:07] [main/INFO] [connect]: Took 687ms to boot Connect
+[00:09:07] [main/INFO] [com.velocitypowered.proxy.plugin.VelocityPluginManager]: Loaded plugin connect 0.15.13 by Minekube
+[00:09:08] [main/INFO] [com.velocitypowered.proxy.plugin.VelocityPluginManager]: Loaded plugin viaversion 5.12.0 by _MylesC, creeper123123321, Gerrygames, kennytv, Matsv, EnZaXD, RK_01
+[00:09:08] [main/INFO] [com.velocitypowered.proxy.plugin.VelocityPluginManager]: Loaded plugin viabackwards 5.12.0 by Matsv, kennytv, Gerrygames, creeper123123321, ForceUpdate1, EnZaXD
+[00:09:08] [main/INFO] [com.velocitypowered.proxy.VelocityServer]: Loaded 4 plugins
+[00:09:08] [connect - Task Executor #0/WARN] [com.velocitypowered.proxy.network.ConnectionManager]: The server channel initializer has been replaced by java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+[00:09:08] [connect - Task Executor #0/INFO] [connect]: Endpoint name: shadowsinthedark
+[00:09:08] [connect - Task Executor #0/INFO] [connect]: Your public address: shadowsinthedark.play.minekube.net
+[00:09:09] [connect - Task Executor #0/INFO] [viaversion]: Replacing channel initializers; you can safely ignore the following two warnings.
+[00:09:09] [OkHttp https://watch-connect.minekube.net/.../INFO] [connect]: Started watching for new player sessions
+[00:09:09] [connect - Task Executor #0/WARN] [com.velocitypowered.proxy.network.ConnectionManager]: The server channel initializer has been replaced by java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+[00:09:09] [connect - Task Executor #0/WARN] [com.velocitypowered.proxy.network.ConnectionManager]: The backend channel initializer has been replaced by java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+[00:09:09] [connect - Task Executor #0/INFO] [viabackwards]: Loading translations...
+[00:09:09] [connect - Task Executor #0/INFO] [viabackwards]: Registering protocols...
+[00:09:09] [connect - Task Executor #0/INFO] [viaversion]: ViaVersion detected lowest supported version by the proxy: 1.13 (393)
+[00:09:09] [connect - Task Executor #0/INFO] [viaversion]: Highest supported version by the proxy: 26.2 (776)
+[00:09:09] [ViaVersion - Task Executor #2/INFO] [viaversion]: Finished mapping loading, shutting down loader executor.
+[00:09:09] [Netty epoll Boss #0/INFO] [com.velocitypowered.proxy.network.ConnectionManager]: Listening on /[0:0:0:0:0:0:0:0]:25565
+[00:09:09] [main/INFO] [com.velocitypowered.proxy.Velocity]: Done (3.31s)!
+[00:09:40] [Netty epoll Worker #1/INFO] [com.velocitypowered.proxy.connection.client.AuthSessionHandler]: [connected player] DiagProbe (/127.0.0.1:56592) has connected
+[00:09:40] [Netty epoll Worker #1/INFO] [com.velocitypowered.proxy.connection.MinecraftConnection]: [server connection] DiagProbe -> folia has connected
+[00:10:06] [Netty epoll Worker #1/INFO] [com.velocitypowered.proxy.connection.MinecraftConnection]: [connected player] DiagProbe (/127.0.0.1:56592) has disconnected
+[00:10:06] [Netty epoll Worker #1/INFO] [com.velocitypowered.proxy.connection.MinecraftConnection]: [server connection] DiagProbe -> folia has disconnected
+=== velocity.log (full) ===
+2026-09-23T00:09:06.084854395Z main WARN Advanced terminal features are not available in this environment
+[00:09:06 INFO]: Booting up Velocity 4.1.1...
+[00:09:06 INFO]: Connections will use epoll channels, libdeflate (Linux x86_64) compression, OpenSSL 3.x.x (Linux x86_64) ciphers
+[00:09:06 WARN]: The proxy is running in offline mode! This is a security risk and you will NOT receive any support!
+[00:09:06 INFO]: Loading localizations...
+[00:09:07 INFO]: Loading plugins...
 WARNING: Final field id in class com.velocitypowered.api.plugin.ap.SerializedPluginDescription has been mutated reflectively by class com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$2 in unnamed module @530612ba (file:/home/runner/mc/velocity/velocity.jar)
 WARNING: Use --enable-final-field-mutation=ALL-UNNAMED to avoid a warning
 WARNING: Mutating final fields will be blocked in a future release unless final field mutation is enabled
@@ -15,27 +264,27 @@ WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
 WARNING: sun.misc.Unsafe::staticFieldBase has been called by com.google.inject.internal.aop.HiddenClassDefiner (file:/home/runner/mc/velocity/velocity.jar)
 WARNING: Please consider reporting this to the maintainers of class com.google.inject.internal.aop.HiddenClassDefiner
 WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
-[18:57:31 WARN] [connect]: en_ is not a supported language.
-[18:57:31 INFO] [connect]: Took 704ms to boot Connect
-[18:57:31 INFO]: Loaded plugin connect 0.15.13 by Minekube
-[18:57:31 INFO]: Loaded plugin viaversion 5.12.0 by _MylesC, creeper123123321, Gerrygames, kennytv, Matsv, EnZaXD, RK_01
-[18:57:31 INFO]: Loaded plugin viabackwards 5.12.0 by Matsv, kennytv, Gerrygames, creeper123123321, ForceUpdate1, EnZaXD
-[18:57:31 INFO]: Loaded 4 plugins
-[18:57:31 WARN]: The server channel initializer has been replaced by java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
-[18:57:31 INFO] [connect]: Endpoint name: shadowsinthedark
-[18:57:31 INFO] [connect]: Your public address: shadowsinthedark.play.minekube.net
-[18:57:31 INFO] [viaversion]: Replacing channel initializers; you can safely ignore the following two warnings.
-[18:57:31 WARN]: The server channel initializer has been replaced by java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
-[18:57:31 WARN]: The backend channel initializer has been replaced by java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
-[18:57:31 INFO] [viabackwards]: Loading translations...
-[18:57:31 INFO] [viabackwards]: Registering protocols...
-[18:57:31 INFO] [connect]: Started watching for new player sessions
-[18:57:32 INFO] [viaversion]: ViaVersion detected lowest supported version by the proxy: 1.13 (393)
-[18:57:32 INFO] [viaversion]: Highest supported version by the proxy: 26.2 (776)
-[18:57:32 INFO] [viaversion]: Finished mapping loading, shutting down loader executor.
-[18:57:32 INFO]: Listening on /[0:0:0:0:0:0:0:0]:25565
-[18:57:32 INFO]: Done (2.5s)!
-[18:58:04 INFO]: [connected player] DiagProbe (/127.0.0.1:48428) has connected
-[18:58:04 INFO]: [server connection] DiagProbe -> folia has connected
-[18:58:29 INFO]: [connected player] DiagProbe (/127.0.0.1:48428) has disconnected
-[18:58:29 INFO]: [server connection] DiagProbe -> folia has disconnected
+[00:09:07 WARN] [connect]: en_ is not a supported language.
+[00:09:07 INFO] [connect]: Took 687ms to boot Connect
+[00:09:07 INFO]: Loaded plugin connect 0.15.13 by Minekube
+[00:09:08 INFO]: Loaded plugin viaversion 5.12.0 by _MylesC, creeper123123321, Gerrygames, kennytv, Matsv, EnZaXD, RK_01
+[00:09:08 INFO]: Loaded plugin viabackwards 5.12.0 by Matsv, kennytv, Gerrygames, creeper123123321, ForceUpdate1, EnZaXD
+[00:09:08 INFO]: Loaded 4 plugins
+[00:09:08 WARN]: The server channel initializer has been replaced by java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+[00:09:08 INFO] [connect]: Endpoint name: shadowsinthedark
+[00:09:08 INFO] [connect]: Your public address: shadowsinthedark.play.minekube.net
+[00:09:09 INFO] [viaversion]: Replacing channel initializers; you can safely ignore the following two warnings.
+[00:09:09 INFO] [connect]: Started watching for new player sessions
+[00:09:09 WARN]: The server channel initializer has been replaced by java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+[00:09:09 WARN]: The backend channel initializer has been replaced by java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+[00:09:09 INFO] [viabackwards]: Loading translations...
+[00:09:09 INFO] [viabackwards]: Registering protocols...
+[00:09:09 INFO] [viaversion]: ViaVersion detected lowest supported version by the proxy: 1.13 (393)
+[00:09:09 INFO] [viaversion]: Highest supported version by the proxy: 26.2 (776)
+[00:09:09 INFO] [viaversion]: Finished mapping loading, shutting down loader executor.
+[00:09:09 INFO]: Listening on /[0:0:0:0:0:0:0:0]:25565
+[00:09:09 INFO]: Done (3.31s)!
+[00:09:40 INFO]: [connected player] DiagProbe (/127.0.0.1:56592) has connected
+[00:09:40 INFO]: [server connection] DiagProbe -> folia has connected
+[00:10:06 INFO]: [connected player] DiagProbe (/127.0.0.1:56592) has disconnected
+[00:10:06 INFO]: [server connection] DiagProbe -> folia has disconnected
