@@ -1,4 +1,4 @@
-13:49:10 UTC — velocity diag (running)
+13:54:19 UTC — velocity diag (running)
 registered: 0
 0 matching lines
 === velocity.log (tail 40) ===
@@ -41,3 +41,4 @@ WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
 [10:33:04 INFO]: [server connection] DiagProbe -> folia has disconnected
 [13:49:07 ERROR] [connect]: Connection error with WatchService: java.io.EOFException
 [13:49:07 INFO] [connect]: Trying to reconnect in 1.229s...
+[13:49:19 INFO] [connect]: Started watching for new player sessions
