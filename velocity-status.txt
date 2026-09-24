@@ -1,11 +1,6 @@
-20:51:08 UTC — velocity diag (running)
-registered: 1 matching lines
+20:56:11 UTC — velocity diag (running)
+registered: 2 matching lines
 === velocity.log (tail 40) ===
-[17:40:22 INFO]: Connections will use epoll channels, libdeflate (Linux x86_64) compression, OpenSSL 3.x.x (Linux x86_64) ciphers
-[17:40:23 WARN]: The proxy is running in offline mode! This is a security risk and you will NOT receive any support!
-[17:40:23 INFO]: Loading localizations...
-[17:40:23 INFO]: Loading plugins...
-WARNING: Final field id in class com.velocitypowered.api.plugin.ap.SerializedPluginDescription has been mutated reflectively by class com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$2 in unnamed module @530612ba (file:/home/runner/mc/velocity/velocity.jar)
 WARNING: Use --enable-final-field-mutation=ALL-UNNAMED to avoid a warning
 WARNING: Mutating final fields will be blocked in a future release unless final field mutation is enabled
 WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
@@ -41,3 +36,8 @@ WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
 [20:51:02 INFO]: [connected player] birsagi (/172.16.7.98:0) has disconnected
 [20:51:02 INFO] [connect]: Connect tunneled player birsagi disconnected
 [20:51:02 INFO]: [server connection] birsagi -> folia has disconnected
+[20:51:41 INFO]: [connected player] birsagi (/172.16.7.98:0) has connected
+[20:51:41 INFO]: [server connection] birsagi -> folia has connected
+[20:52:03 INFO] [connect]: Connect tunneled player birsagi disconnected
+[20:52:03 INFO]: [connected player] birsagi (/172.16.7.98:0) has disconnected
+[20:52:03 INFO]: [server connection] birsagi -> folia has disconnected
