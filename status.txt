@@ -1,11 +1,1 @@
-07:28:30 UTC — remote-console executed:
-list
---- console tail ---
-[07:27:18 INFO]: Prepared spawn area in 17 ms
-[07:27:18 INFO]: Done preparing level "world" (0.684s)
-[07:27:18 INFO]: [spark] The spark plugin has been preferred but was not loaded. The bundled spark profiler will enabled instead.
-[07:27:18 INFO]: [spark] The spark profiler will not be enabled because it is currently disabled in the configuration.
-[07:27:18 INFO]: Done (9.639s)! For help, type "help"
-[07:27:58 INFO]: UUID of player DiagProbe is 50054ea4-9f67-32ed-bf0d-4f13b9c5e155
-[07:28:23 INFO]: DiagProbe (50054ea4-9f67-32ed-bf0d-4f13b9c5e155) lost connection: Disconnected
-[07:28:26 INFO]: There are 0 of a max of 100 players online: 
+12:38:07 UTC — snapshot built 246M, rotating release
