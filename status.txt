@@ -1,1 +1,1 @@
-17:50:09 UTC — snapshot restored 175M
+17:50:10 UTC — configs written (folia+velocity+connect)
