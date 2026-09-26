@@ -1,1 +1,28 @@
-12:38:38 UTC — folia starting (survival, offline, 25566)
+12:39:51 UTC — SERVER UP (Folia survival via Velocity)
+--- velocity.log tail ---
+WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
+[12:38:50 WARN] [connect]: en_ is not a supported language.
+[12:38:50 INFO] [connect]: Took 501ms to boot Connect
+[12:38:50 INFO]: Loaded plugin connect 0.15.13 by Minekube
+[12:38:50 INFO]: Loaded plugin viaversion 5.12.0 by _MylesC, creeper123123321, Gerrygames, kennytv, Matsv, EnZaXD, RK_01
+[12:38:50 INFO]: Loaded plugin viabackwards 5.12.0 by Matsv, kennytv, Gerrygames, creeper123123321, ForceUpdate1, EnZaXD
+[12:38:50 INFO]: Loaded 4 plugins
+[12:38:50 WARN]: The server channel initializer has been replaced by java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+[12:38:51 INFO] [connect]: Endpoint name: shadowsinthedark
+[12:38:51 INFO] [connect]: Your public address: shadowsinthedark.play.minekube.net
+[12:38:51 INFO] [viaversion]: Replacing channel initializers; you can safely ignore the following two warnings.
+[12:38:51 WARN]: The server channel initializer has been replaced by java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+[12:38:51 WARN]: The backend channel initializer has been replaced by java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+[12:38:51 INFO] [viabackwards]: Loading translations...
+[12:38:51 INFO] [viabackwards]: Registering protocols...
+[12:38:51 INFO] [viaversion]: ViaVersion detected lowest supported version by the proxy: 1.13 (393)
+[12:38:51 INFO] [viaversion]: Highest supported version by the proxy: 26.2 (776)
+[12:38:51 INFO] [connect]: Started watching for new player sessions
+[12:38:51 INFO] [viaversion]: Finished mapping loading, shutting down loader executor.
+[12:38:51 INFO]: Listening on /[0:0:0:0:0:0:0:0]:25565
+[12:38:51 INFO]: Done (1.94s)!
+[12:39:24 INFO]: [connected player] DiagProbe (/127.0.0.1:43128) has connected
+[12:39:24 INFO]: [server connection] DiagProbe -> folia has connected
+[12:39:50 INFO]: [connected player] DiagProbe (/127.0.0.1:43128) has disconnected
+[12:39:50 INFO]: [server connection] DiagProbe -> folia has disconnected
+--- folia errors ---
