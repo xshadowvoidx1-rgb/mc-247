@@ -1,11 +1,7 @@
-12:50:10 UTC — velocity diag (running)
+12:55:16 UTC — velocity diag (running)
 registered: 0
 0 matching lines
 === velocity.log (tail 40) ===
-2026-09-26T12:38:49.560864230Z main WARN Advanced terminal features are not available in this environment
-[12:38:49 INFO]: Booting up Velocity 4.1.1...
-[12:38:49 INFO]: Connections will use epoll channels, libdeflate (Linux x86_64) compression, OpenSSL 3.x.x (Linux x86_64) ciphers
-[12:38:49 WARN]: The proxy is running in offline mode! This is a security risk and you will NOT receive any support!
 [12:38:50 INFO]: Loading localizations...
 [12:38:50 INFO]: Loading plugins...
 WARNING: Final field id in class com.velocitypowered.api.plugin.ap.SerializedPluginDescription has been mutated reflectively by class com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$2 in unnamed module @530612ba (file:/home/runner/mc/velocity/velocity.jar)
@@ -42,3 +38,7 @@ WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
 [12:42:41 ERROR] [connect]: Connection error with WatchService: java.io.EOFException
 [12:42:41 INFO] [connect]: Trying to reconnect in 1.183s...
 [12:42:56 INFO] [connect]: Started watching for new player sessions
+[12:52:46 INFO]: [connected player] rejadama05 (/172.16.76.18:0) has connected
+[12:52:46 INFO]: [server connection] rejadama05 -> folia has connected
+[12:53:01 INFO]: [connected player] rejadama05 (/172.16.76.18:0) has disconnected
+[12:53:01 INFO]: [server connection] rejadama05 -> folia has disconnected
