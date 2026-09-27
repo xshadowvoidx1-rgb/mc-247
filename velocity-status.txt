@@ -1,9 +1,6 @@
-12:04:43 UTC — velocity diag (running)
-registered: 1 matching lines
+12:09:50 UTC — velocity diag (running)
+registered: 2 matching lines
 === velocity.log (tail 40) ===
-[09:25:05 INFO]: Loading localizations...
-[09:25:05 INFO]: Loading plugins...
-WARNING: Final field id in class com.velocitypowered.api.plugin.ap.SerializedPluginDescription has been mutated reflectively by class com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$2 in unnamed module @530612ba (file:/home/runner/mc/velocity/velocity.jar)
 WARNING: Use --enable-final-field-mutation=ALL-UNNAMED to avoid a warning
 WARNING: Mutating final fields will be blocked in a future release unless final field mutation is enabled
 WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
@@ -41,3 +38,6 @@ WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
 [11:37:23 INFO]: [server connection] PunkkyDread -> folia has disconnected
 [12:03:50 INFO]: [connected player] GODXHUNT1102 (/172.16.33.250:0) has connected
 [12:03:51 INFO]: [server connection] GODXHUNT1102 -> folia has connected
+[12:07:17 INFO] [connect]: Connect tunneled player GODXHUNT1102 disconnected
+[12:07:17 INFO]: [connected player] GODXHUNT1102 (/172.16.33.250:0) has disconnected
+[12:07:17 INFO]: [server connection] GODXHUNT1102 -> folia has disconnected
