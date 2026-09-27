@@ -1,43 +1,43 @@
-22:23:08 UTC — velocity diag (running)
-registered: 0
-0 matching lines
+22:28:14 UTC — velocity diag (running)
+registered: 1 matching lines
 === velocity.log (tail 40) ===
-2026-09-27T19:49:04.204288678Z main WARN Advanced terminal features are not available in this environment
-[19:49:04 INFO]: Booting up Velocity 4.1.1...
-[19:49:04 INFO]: Connections will use epoll channels, libdeflate (Linux x86_64) compression, OpenSSL 3.x.x (Linux x86_64) ciphers
-[19:49:04 WARN]: The proxy is running in offline mode! This is a security risk and you will NOT receive any support!
-[19:49:05 INFO]: Loading localizations...
-[19:49:05 INFO]: Loading plugins...
-WARNING: Final field id in class com.velocitypowered.api.plugin.ap.SerializedPluginDescription has been mutated reflectively by class com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$2 in unnamed module @530612ba (file:/home/runner/mc/velocity/velocity.jar)
-WARNING: Use --enable-final-field-mutation=ALL-UNNAMED to avoid a warning
-WARNING: Mutating final fields will be blocked in a future release unless final field mutation is enabled
-WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
-WARNING: sun.misc.Unsafe::staticFieldBase has been called by com.google.inject.internal.aop.HiddenClassDefiner (file:/home/runner/mc/velocity/velocity.jar)
-WARNING: Please consider reporting this to the maintainers of class com.google.inject.internal.aop.HiddenClassDefiner
-WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
-[19:49:06 WARN] [connect]: en_ is not a supported language.
-[19:49:06 INFO] [connect]: Took 767ms to boot Connect
-[19:49:06 INFO]: Loaded plugin connect 0.15.13 by Minekube
-[19:49:06 INFO]: Loaded plugin viaversion 5.12.0 by _MylesC, creeper123123321, Gerrygames, kennytv, Matsv, EnZaXD, RK_01
-[19:49:06 INFO]: Loaded plugin viabackwards 5.12.0 by Matsv, kennytv, Gerrygames, creeper123123321, ForceUpdate1, EnZaXD
-[19:49:06 INFO]: Loaded 4 plugins
-[19:49:06 WARN]: The server channel initializer has been replaced by java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
-[19:49:06 INFO] [connect]: Endpoint name: shadowsinthedark
-[19:49:06 INFO] [connect]: Your public address: shadowsinthedark.play.minekube.net
-[19:49:06 INFO] [connect]: A new version of Connect is available: 0.15.14 (current: 0.15.13)
-[19:49:06 INFO] [connect]: Download: https://github.com/minekube/connect-java/releases/latest
-[19:49:06 INFO] [connect]: Started watching for new player sessions
-[19:49:07 INFO] [viaversion]: Replacing channel initializers; you can safely ignore the following two warnings.
-[19:49:07 WARN]: The server channel initializer has been replaced by java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
-[19:49:07 WARN]: The backend channel initializer has been replaced by java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
-[19:49:07 INFO] [viabackwards]: Loading translations...
-[19:49:07 INFO] [viabackwards]: Registering protocols...
-[19:49:07 INFO] [viaversion]: ViaVersion detected lowest supported version by the proxy: 1.13 (393)
-[19:49:07 INFO] [viaversion]: Highest supported version by the proxy: 26.2 (776)
-[19:49:07 INFO]: Listening on /[0:0:0:0:0:0:0:0]:25565
-[19:49:07 INFO]: Done (3.06s)!
-[19:49:07 INFO] [viaversion]: Finished mapping loading, shutting down loader executor.
-[19:49:38 INFO]: [connected player] DiagProbe (/127.0.0.1:59294) has connected
-[19:49:38 INFO]: [server connection] DiagProbe -> folia has connected
-[19:50:03 INFO]: [connected player] DiagProbe (/127.0.0.1:59294) has disconnected
-[19:50:03 INFO]: [server connection] DiagProbe -> folia has disconnected
+[22:23:52 INFO]: [connected player] Adammm08144 (/172.16.76.18:0) has disconnected: An internal error occurred in your connection.
+[22:23:52 ERROR]: [connected player] Adammm08144 (/172.16.76.18:0): exception encountered in com.velocitypowered.proxy.connection.client.ClientPlaySessionHandler@2b2fb5e3
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.local.LocalChannel.doWrite(LocalChannel.java:393) ~[velocity.jar:4.1.1]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.flush0(AbstractChannel.java:794) ~[velocity.jar:4.1.1]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.flush(AbstractChannel.java:758) ~[velocity.jar:4.1.1]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.flush(DefaultChannelPipeline.java:1391) ~[velocity.jar:4.1.1]
+	at io.netty.channel.AbstractChannelHandlerContext.flush(AbstractChannelHandlerContext.java:754) ~[velocity.jar:4.1.1]
+	at io.netty.channel.DefaultChannelPipeline.flush(DefaultChannelPipeline.java:988) ~[velocity.jar:4.1.1]
+	at io.netty.channel.Channel.flush(Channel.java:251) ~[velocity.jar:4.1.1]
+	at com.minekube.connect.network.netty.ChannelWrapper.flush(ChannelWrapper.java:224) ~[?:?]
+	at com.velocitypowered.proxy.connection.MinecraftConnection.flush(MinecraftConnection.java:264) ~[velocity.jar:4.1.1]
+	at com.velocitypowered.proxy.connection.backend.BackendPlaySessionHandler.readCompleted(BackendPlaySessionHandler.java:480) ~[velocity.jar:4.1.1]
+	at com.velocitypowered.proxy.connection.MinecraftConnection.channelReadComplete(MinecraftConnection.java:175) ~[velocity.jar:4.1.1]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelReadComplete(AbstractChannelHandlerContext.java:387) ~[velocity.jar:4.1.1]
+	at com.velocitypowered.proxy.protocol.netty.AutoReadHolderHandler.channelReadComplete(AutoReadHolderHandler.java:69) ~[velocity.jar:4.1.1]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelReadComplete(AbstractChannelHandlerContext.java:385) ~[velocity.jar:4.1.1]
+	at io.netty.handler.codec.MessageToMessageDecoder.channelReadComplete(MessageToMessageDecoder.java:125) ~[velocity.jar:4.1.1]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelReadComplete(AbstractChannelHandlerContext.java:387) ~[velocity.jar:4.1.1]
+	at io.netty.handler.codec.MessageToMessageDecoder.channelReadComplete(MessageToMessageDecoder.java:125) ~[velocity.jar:4.1.1]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelReadComplete(AbstractChannelHandlerContext.java:387) ~[velocity.jar:4.1.1]
+	at io.netty.handler.timeout.IdleStateHandler.channelReadComplete(IdleStateHandler.java:297) ~[velocity.jar:4.1.1]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelReadComplete(AbstractChannelHandlerContext.java:385) ~[velocity.jar:4.1.1]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelReadComplete(ByteToMessageDecoder.java:374) ~[velocity.jar:4.1.1]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelReadComplete(AbstractChannelHandlerContext.java:387) ~[velocity.jar:4.1.1]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelReadComplete(DefaultChannelPipeline.java:1434) ~[velocity.jar:4.1.1]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelReadComplete(DefaultChannelPipeline.java:932) ~[velocity.jar:4.1.1]
+	at io.netty.channel.epoll.AbstractEpollStreamChannel$EpollStreamUnsafe.epollInReady(AbstractEpollStreamChannel.java:824) ~[velocity.jar:4.1.1]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.handle(AbstractEpollChannel.java:487) ~[velocity.jar:4.1.1]
+	at io.netty.channel.epoll.EpollIoHandler$DefaultEpollIoRegistration.handle(EpollIoHandler.java:349) ~[velocity.jar:4.1.1]
+	at io.netty.channel.epoll.EpollIoHandler.processReady(EpollIoHandler.java:548) ~[velocity.jar:4.1.1]
+	at io.netty.channel.epoll.EpollIoHandler.run(EpollIoHandler.java:495) ~[velocity.jar:4.1.1]
+	at com.minekube.connect.inject.velocity.IoHandlerWrapper.run(IoHandlerWrapper.java:55) ~[?:?]
+	at io.netty.channel.SingleThreadIoEventLoop.runIo(SingleThreadIoEventLoop.java:225) ~[velocity.jar:4.1.1]
+	at io.netty.channel.SingleThreadIoEventLoop.run(SingleThreadIoEventLoop.java:196) ~[velocity.jar:4.1.1]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:1204) ~[velocity.jar:4.1.1]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[velocity.jar:4.1.1]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[velocity.jar:4.1.1]
+	at java.base/java.lang.Thread.run(Unknown Source) [?:?]
+[22:23:52 INFO]: [server connection] Adammm08144 -> folia has disconnected
