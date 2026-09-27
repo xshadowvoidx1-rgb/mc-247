@@ -1,8 +1,6 @@
-11:59:35 UTC — velocity diag (running)
+12:04:43 UTC — velocity diag (running)
 registered: 1 matching lines
 === velocity.log (tail 40) ===
-[09:25:04 INFO]: Connections will use epoll channels, libdeflate (Linux x86_64) compression, OpenSSL 3.x.x (Linux x86_64) ciphers
-[09:25:04 WARN]: The proxy is running in offline mode! This is a security risk and you will NOT receive any support!
 [09:25:05 INFO]: Loading localizations...
 [09:25:05 INFO]: Loading plugins...
 WARNING: Final field id in class com.velocitypowered.api.plugin.ap.SerializedPluginDescription has been mutated reflectively by class com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$2 in unnamed module @530612ba (file:/home/runner/mc/velocity/velocity.jar)
@@ -41,3 +39,5 @@ WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
 [11:37:23 INFO]: [connected player] PunkkyDread (/172.16.67.130:0) has disconnected
 [11:37:23 INFO] [connect]: Connect tunneled player PunkkyDread disconnected
 [11:37:23 INFO]: [server connection] PunkkyDread -> folia has disconnected
+[12:03:50 INFO]: [connected player] GODXHUNT1102 (/172.16.33.250:0) has connected
+[12:03:51 INFO]: [server connection] GODXHUNT1102 -> folia has connected
