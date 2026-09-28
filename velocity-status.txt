@@ -1,9 +1,7 @@
-21:29:27 UTC — velocity diag (running)
+21:34:36 UTC — velocity diag (running)
 registered: 0
 0 matching lines
 === velocity.log (tail 40) ===
-WARNING: Mutating final fields will be blocked in a future release unless final field mutation is enabled
-WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
 WARNING: sun.misc.Unsafe::staticFieldBase has been called by com.google.inject.internal.aop.HiddenClassDefiner (file:/home/runner/mc/velocity/velocity.jar)
 WARNING: Please consider reporting this to the maintainers of class com.google.inject.internal.aop.HiddenClassDefiner
 WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
@@ -42,3 +40,5 @@ WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
 [19:06:04 ERROR] [connect]: Connection error with WatchService: java.net.SocketTimeoutException: sent ping but didn't receive pong within 30000ms (after 6 successful ping/pongs)
 [19:06:04 INFO] [connect]: Trying to reconnect in 0.539s...
 [19:06:06 INFO] [connect]: Started watching for new player sessions
+[21:34:35 INFO]: [connected player] Alonjovi22 (/172.16.27.186:0) has connected
+[21:34:35 INFO]: [server connection] Alonjovi22 -> folia has connected
