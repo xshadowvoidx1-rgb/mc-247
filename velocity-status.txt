@@ -1,10 +1,7 @@
-10:27:14 UTC — velocity diag (running)
+10:32:19 UTC — velocity diag (running)
 registered: 0
 0 matching lines
 === velocity.log (tail 40) ===
-WARNING: Mutating final fields will be blocked in a future release unless final field mutation is enabled
-WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
-WARNING: sun.misc.Unsafe::staticFieldBase has been called by com.google.inject.internal.aop.HiddenClassDefiner (file:/home/runner/mc/velocity/velocity.jar)
 WARNING: Please consider reporting this to the maintainers of class com.google.inject.internal.aop.HiddenClassDefiner
 WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
 [06:11:40 WARN] [connect]: en_ is not a supported language.
@@ -42,3 +39,6 @@ WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
 [09:18:44 ERROR] [connect]: Connection error with WatchService: java.io.EOFException
 [09:18:44 INFO] [connect]: Trying to reconnect in 0.584s...
 [09:18:46 INFO] [connect]: Started watching for new player sessions
+[10:28:51 ERROR] [connect]: Connection error with WatchService: java.io.EOFException
+[10:28:51 INFO] [connect]: Trying to reconnect in 0.771s...
+[10:28:53 INFO] [connect]: Started watching for new player sessions
