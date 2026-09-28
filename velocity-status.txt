@@ -1,9 +1,6 @@
-15:53:48 UTC — velocity diag (running)
+15:58:55 UTC — velocity diag (running)
 registered: 3 matching lines
 === velocity.log (tail 40) ===
-WARNING: sun.misc.Unsafe::staticFieldBase has been called by com.google.inject.internal.aop.HiddenClassDefiner (file:/home/runner/mc/velocity/velocity.jar)
-WARNING: Please consider reporting this to the maintainers of class com.google.inject.internal.aop.HiddenClassDefiner
-WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
 [11:22:48 WARN] [connect]: en_ is not a supported language.
 [11:22:48 INFO] [connect]: Took 671ms to boot Connect
 [11:22:48 INFO]: Loaded plugin connect 0.15.13 by Minekube
@@ -41,3 +38,6 @@ WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
 [15:31:49 INFO] [connect]: Connect tunneled player tiger4eto disconnected
 [15:31:49 INFO]: [connected player] tiger4eto (/172.16.6.138:0) has disconnected
 [15:31:49 INFO]: [server connection] tiger4eto -> folia has disconnected
+[15:54:11 ERROR] [connect]: Connection error with WatchService: java.io.EOFException
+[15:54:11 INFO] [connect]: Trying to reconnect in 0.607s...
+[15:54:17 INFO] [connect]: Started watching for new player sessions
