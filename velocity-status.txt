@@ -1,10 +1,7 @@
-23:23:46 UTC — velocity diag (running)
+23:28:52 UTC — velocity diag (running)
 registered: 0
 0 matching lines
 === velocity.log (tail 40) ===
-2026-09-28T21:45:40.201383202Z main WARN Advanced terminal features are not available in this environment
-[21:45:40 INFO]: Booting up Velocity 4.1.1...
-[21:45:40 INFO]: Connections will use epoll channels, libdeflate (Linux x86_64) compression, OpenSSL 3.x.x (Linux x86_64) ciphers
 [21:45:40 WARN]: The proxy is running in offline mode! This is a security risk and you will NOT receive any support!
 [21:45:40 INFO]: Loading localizations...
 [21:45:40 INFO]: Loading plugins...
@@ -41,3 +38,7 @@ WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
 [21:46:14 INFO]: [server connection] DiagProbe -> folia has connected
 [21:46:40 INFO]: [connected player] DiagProbe (/127.0.0.1:44042) has disconnected
 [21:46:40 INFO]: [server connection] DiagProbe -> folia has disconnected
+[23:26:28 INFO]: [connected player] sammythemonkey1 (/172.16.1.250:0) has connected
+[23:26:28 INFO]: [server connection] sammythemonkey1 -> folia has connected
+[23:26:36 INFO]: [connected player] sammythemonkey1 (/172.16.1.250:0) has disconnected
+[23:26:36 INFO]: [server connection] sammythemonkey1 -> folia has disconnected
