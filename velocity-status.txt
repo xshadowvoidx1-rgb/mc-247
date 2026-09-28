@@ -1,10 +1,7 @@
-05:17:04 UTC — velocity diag (running)
+05:22:11 UTC — velocity diag (running)
 registered: 0
 0 matching lines
 === velocity.log (tail 40) ===
-WARNING: Please consider reporting this to the maintainers of class com.google.inject.internal.aop.HiddenClassDefiner
-WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
-[01:00:18 WARN] [connect]: en_ is not a supported language.
 [01:00:18 INFO] [connect]: Took 806ms to boot Connect
 [01:00:18 INFO]: Loaded plugin connect 0.15.13 by Minekube
 [01:00:18 INFO]: Loaded plugin viaversion 5.12.0 by _MylesC, creeper123123321, Gerrygames, kennytv, Matsv, EnZaXD, RK_01
@@ -42,3 +39,6 @@ WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
 [03:43:55 ERROR] [connect]: Connection error with WatchService: java.io.EOFException
 [03:43:55 INFO] [connect]: Trying to reconnect in 0.813s...
 [03:43:58 INFO] [connect]: Started watching for new player sessions
+[05:18:47 ERROR] [connect]: Connection error with WatchService: java.io.EOFException
+[05:18:47 INFO] [connect]: Trying to reconnect in 1.329s...
+[05:18:51 INFO] [connect]: Started watching for new player sessions
