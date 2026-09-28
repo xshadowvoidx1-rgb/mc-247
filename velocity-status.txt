@@ -1,12 +1,6 @@
-10:52:41 UTC — velocity diag (running)
-registered: 0
-0 matching lines
+10:57:46 UTC — velocity diag (running)
+registered: 1 matching lines
 === velocity.log (tail 40) ===
-WARNING: Please consider reporting this to the maintainers of class com.google.inject.internal.aop.HiddenClassDefiner
-WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
-[06:11:40 WARN] [connect]: en_ is not a supported language.
-[06:11:40 INFO] [connect]: Took 628ms to boot Connect
-[06:11:40 INFO]: Loaded plugin connect 0.15.13 by Minekube
 [06:11:40 INFO]: Loaded plugin viaversion 5.12.0 by _MylesC, creeper123123321, Gerrygames, kennytv, Matsv, EnZaXD, RK_01
 [06:11:40 INFO]: Loaded plugin viabackwards 5.12.0 by Matsv, kennytv, Gerrygames, creeper123123321, ForceUpdate1, EnZaXD
 [06:11:40 INFO]: Loaded 4 plugins
@@ -42,3 +36,8 @@ WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
 [10:28:51 ERROR] [connect]: Connection error with WatchService: java.io.EOFException
 [10:28:51 INFO] [connect]: Trying to reconnect in 0.771s...
 [10:28:53 INFO] [connect]: Started watching for new player sessions
+[10:57:20 INFO]: [connected player] _Jacob1329910 (/127.0.0.1:0) has connected
+[10:57:20 INFO]: [server connection] _Jacob1329910 -> folia has connected
+[10:57:37 INFO]: [connected player] _Jacob1329910 (/127.0.0.1:0) has disconnected
+[10:57:37 INFO]: [server connection] _Jacob1329910 -> folia has disconnected
+[10:57:37 INFO] [connect]: Connect tunneled player _Jacob1329910 disconnected
