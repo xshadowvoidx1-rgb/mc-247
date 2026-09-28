@@ -1,10 +1,6 @@
-21:34:36 UTC — velocity diag (running)
-registered: 0
-0 matching lines
+21:39:45 UTC — velocity diag (running)
+registered: 1 matching lines
 === velocity.log (tail 40) ===
-WARNING: sun.misc.Unsafe::staticFieldBase has been called by com.google.inject.internal.aop.HiddenClassDefiner (file:/home/runner/mc/velocity/velocity.jar)
-WARNING: Please consider reporting this to the maintainers of class com.google.inject.internal.aop.HiddenClassDefiner
-WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
 [16:34:11 WARN] [connect]: en_ is not a supported language.
 [16:34:11 INFO] [connect]: Took 748ms to boot Connect
 [16:34:11 INFO]: Loaded plugin connect 0.15.13 by Minekube
@@ -42,3 +38,6 @@ WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
 [19:06:06 INFO] [connect]: Started watching for new player sessions
 [21:34:35 INFO]: [connected player] Alonjovi22 (/172.16.27.186:0) has connected
 [21:34:35 INFO]: [server connection] Alonjovi22 -> folia has connected
+[21:35:21 INFO]: [connected player] Alonjovi22 (/172.16.27.186:0) has disconnected
+[21:35:21 INFO] [connect]: Connect tunneled player Alonjovi22 disconnected
+[21:35:21 INFO]: [server connection] Alonjovi22 -> folia has disconnected
