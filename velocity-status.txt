@@ -1,11 +1,6 @@
-02:03:14 UTC — velocity diag (running)
-registered: 0
-0 matching lines
+02:08:23 UTC — velocity diag (running)
+registered: 1 matching lines
 === velocity.log (tail 40) ===
-2026-10-01T22:25:26.570915211Z main WARN Advanced terminal features are not available in this environment
-[22:25:26 INFO]: Booting up Velocity 4.1.1...
-[22:25:27 INFO]: Connections will use epoll channels, libdeflate (Linux x86_64) compression, OpenSSL 3.x.x (Linux x86_64) ciphers
-[22:25:27 WARN]: The proxy is running in offline mode! This is a security risk and you will NOT receive any support!
 [22:25:27 INFO]: Loading localizations...
 [22:25:27 INFO]: Loading plugins...
 WARNING: Final field id in class com.velocitypowered.api.plugin.ap.SerializedPluginDescription has been mutated reflectively by class com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$2 in unnamed module @530612ba (file:/home/runner/mc/velocity/velocity.jar)
@@ -41,3 +36,8 @@ WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
 [22:26:01 INFO]: [server connection] DiagProbe -> folia has connected
 [22:26:27 INFO]: [connected player] DiagProbe (/127.0.0.1:48450) has disconnected
 [22:26:27 INFO]: [server connection] DiagProbe -> folia has disconnected
+[02:06:13 INFO]: [connected player] ColdyTheGreat (/172.16.27.186:0) has connected
+[02:06:14 INFO]: [server connection] ColdyTheGreat -> folia has connected
+[02:07:59 INFO]: [connected player] ColdyTheGreat (/172.16.27.186:0) has disconnected
+[02:07:59 INFO] [connect]: Connect tunneled player ColdyTheGreat disconnected
+[02:07:59 INFO]: [server connection] ColdyTheGreat -> folia has disconnected
