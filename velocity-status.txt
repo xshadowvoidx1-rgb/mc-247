@@ -1,11 +1,6 @@
-13:20:25 UTC — velocity diag (running)
-registered: 0
-0 matching lines
+13:25:34 UTC — velocity diag (running)
+registered: 1 matching lines
 === velocity.log (tail 40) ===
-2026-10-02T11:57:16.630698009Z main WARN Advanced terminal features are not available in this environment
-[11:57:17 INFO]: Booting up Velocity 4.1.1...
-[11:57:17 INFO]: Connections will use epoll channels, libdeflate (Linux x86_64) compression, OpenSSL 3.x.x (Linux x86_64) ciphers
-[11:57:17 WARN]: The proxy is running in offline mode! This is a security risk and you will NOT receive any support!
 [11:57:17 INFO]: Loading localizations...
 [11:57:17 INFO]: Loading plugins...
 WARNING: Final field id in class com.velocitypowered.api.plugin.ap.SerializedPluginDescription has been mutated reflectively by class com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$2 in unnamed module @530612ba (file:/home/runner/mc/velocity/velocity.jar)
@@ -41,3 +36,8 @@ WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
 [11:57:51 INFO]: [server connection] DiagProbe -> folia has connected
 [11:58:17 INFO]: [connected player] DiagProbe (/127.0.0.1:55686) has disconnected
 [11:58:17 INFO]: [server connection] DiagProbe -> folia has disconnected
+[13:23:37 INFO]: [connected player] Shreyash_haha69 (/172.16.4.250:0) has connected
+[13:23:37 INFO]: [server connection] Shreyash_haha69 -> folia has connected
+[13:24:17 INFO]: [connected player] Shreyash_haha69 (/172.16.4.250:0) has disconnected
+[13:24:17 INFO] [connect]: Connect tunneled player Shreyash_haha69 disconnected
+[13:24:17 INFO]: [server connection] Shreyash_haha69 -> folia has disconnected
