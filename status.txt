@@ -1,1 +1,1 @@
-21:56:50 UTC — JRE ready (openjdk version "26.0.2.1" 2026-08-18)
+21:57:01 UTC — snapshot restored 169M
