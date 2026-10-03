@@ -1,11 +1,6 @@
-06:22:49 UTC — velocity diag (running)
-registered: 0
-0 matching lines
+06:27:54 UTC — velocity diag (running)
+registered: 1 matching lines
 === velocity.log (tail 40) ===
-2026-10-03T03:08:34.255543773Z main WARN Advanced terminal features are not available in this environment
-[03:08:34 INFO]: Booting up Velocity 4.1.1...
-[03:08:34 INFO]: Connections will use epoll channels, libdeflate (Linux x86_64) compression, OpenSSL 3.x.x (Linux x86_64) ciphers
-[03:08:34 WARN]: The proxy is running in offline mode! This is a security risk and you will NOT receive any support!
 [03:08:35 INFO]: Loading localizations...
 [03:08:35 INFO]: Loading plugins...
 WARNING: Final field id in class com.velocitypowered.api.plugin.ap.SerializedPluginDescription has been mutated reflectively by class com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$2 in unnamed module @530612ba (file:/home/runner/mc/velocity/velocity.jar)
@@ -41,3 +36,8 @@ WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
 [03:09:08 INFO]: [server connection] DiagProbe -> folia has connected
 [03:09:33 INFO]: [connected player] DiagProbe (/127.0.0.1:38516) has disconnected
 [03:09:33 INFO]: [server connection] DiagProbe -> folia has disconnected
+[06:25:28 INFO]: [connected player] poohie (/172.16.4.250:0) has connected
+[06:25:28 INFO]: [server connection] poohie -> folia has connected
+[06:27:18 INFO] [connect]: Connect tunneled player poohie disconnected
+[06:27:18 INFO]: [connected player] poohie (/172.16.4.250:0) has disconnected
+[06:27:18 INFO]: [server connection] poohie -> folia has disconnected
