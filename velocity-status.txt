@@ -1,9 +1,6 @@
-06:53:22 UTC — velocity diag (running)
-registered: 0
-0 matching lines
+06:58:30 UTC — velocity diag (running)
+registered: 2 matching lines
 === velocity.log (tail 40) ===
-2026-10-09T04:28:51.968994482Z main WARN Advanced terminal features are not available in this environment
-[04:28:52 INFO]: Booting up Velocity 4.1.1...
 [04:28:52 INFO]: Connections will use epoll channels, libdeflate (Linux x86_64) compression, OpenSSL 3.x.x (Linux x86_64) ciphers
 [04:28:53 WARN]: The proxy is running in offline mode! This is a security risk and you will NOT receive any support!
 [04:28:53 INFO]: Loading localizations...
@@ -42,3 +39,5 @@ WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
 [04:29:26 INFO]: [server connection] DiagProbe -> folia has connected
 [04:29:52 INFO]: [connected player] DiagProbe (/127.0.0.1:59414) has disconnected
 [04:29:52 INFO]: [server connection] DiagProbe -> folia has disconnected
+[06:55:46 INFO] [connect]: Connect tunneled player kongi9945 disconnected
+[06:56:46 ERROR] [connect]: Connection error with TunnelService player=kongi9945 session=db48vl0kfoac21th703g tunnelToBackendPackets=0 tunnelToBackendBytes=0: java.net.SocketException: Socket closed
