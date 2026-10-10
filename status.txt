@@ -1,1 +1,1 @@
-01:14:05 UTC — snapshot built 245M, rotating release
+01:14:32 UTC — JRE ready (openjdk version "26.0.2.1" 2026-08-18)
