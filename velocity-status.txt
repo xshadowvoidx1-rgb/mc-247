@@ -1,4 +1,4 @@
-10:06:33 UTC — velocity diag (running)
+10:11:39 UTC — velocity diag (running)
 registered: 0
 0 matching lines
 === velocity.log (tail 40) ===
@@ -40,3 +40,5 @@ WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
 [08:23:55 INFO]: [server connection] DiagProbe -> folia has connected
 [08:24:21 INFO]: [connected player] DiagProbe (/127.0.0.1:34784) has disconnected
 [08:24:21 INFO]: [server connection] DiagProbe -> folia has disconnected
+[10:10:55 INFO]: [connected player] ghgminetoota3 (/172.16.13.2:0) has connected
+[10:10:55 INFO]: [server connection] ghgminetoota3 -> folia has connected
