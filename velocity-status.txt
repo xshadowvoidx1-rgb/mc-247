@@ -1,12 +1,6 @@
-11:38:12 UTC — velocity diag (running)
-registered: 0
-0 matching lines
+11:43:19 UTC — velocity diag (running)
+registered: 1 matching lines
 === velocity.log (tail 40) ===
-[07:05:58 WARN]: The proxy is running in offline mode! This is a security risk and you will NOT receive any support!
-[07:05:59 INFO]: Loading localizations...
-[07:05:59 INFO]: Loading plugins...
-WARNING: Final field id in class com.velocitypowered.api.plugin.ap.SerializedPluginDescription has been mutated reflectively by class com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$2 in unnamed module @530612ba (file:/home/runner/mc/velocity/velocity.jar)
-WARNING: Use --enable-final-field-mutation=ALL-UNNAMED to avoid a warning
 WARNING: Mutating final fields will be blocked in a future release unless final field mutation is enabled
 WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
 WARNING: sun.misc.Unsafe::staticFieldBase has been called by com.google.inject.internal.aop.HiddenClassDefiner (file:/home/runner/mc/velocity/velocity.jar)
@@ -42,3 +36,8 @@ WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
 [10:35:14 ERROR] [connect]: Connection error with WatchService: java.io.EOFException
 [10:35:14 INFO] [connect]: Trying to reconnect in 1.205s...
 [10:35:18 INFO] [connect]: Started watching for new player sessions
+[11:42:21 INFO]: [connected player] _Adobe803 (/106.222.216.17:0) has connected
+[11:42:21 INFO]: [server connection] _Adobe803 -> folia has connected
+[11:43:06 INFO]: [connected player] _Adobe803 (/106.222.216.17:0) has disconnected
+[11:43:06 INFO] [connect]: Connect tunneled player _Adobe803 disconnected
+[11:43:06 INFO]: [server connection] _Adobe803 -> folia has disconnected
