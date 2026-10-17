@@ -1,11 +1,7 @@
-02:05:15 UTC — velocity diag (running)
+02:10:21 UTC — velocity diag (running)
 registered: 0
 0 matching lines
 === velocity.log (tail 40) ===
-[23:20:49 INFO] [connect]: Started watching for new player sessions
-[23:20:49 INFO] [viaversion]: Replacing channel initializers; you can safely ignore the following two warnings.
-[23:20:49 WARN]: The server channel initializer has been replaced by java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
-[23:20:49 WARN]: The backend channel initializer has been replaced by java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
 [23:20:49 INFO] [viabackwards]: Loading translations...
 [23:20:49 INFO] [viabackwards]: Registering protocols...
 [23:20:49 INFO] [viaversion]: ViaVersion detected lowest supported version by the proxy: 1.13 (393)
@@ -42,3 +38,7 @@ registered: 0
 [02:02:33 INFO] [connect]: Trying to reconnect in 1m 14.822s...
 [02:04:33 ERROR] [connect]: Connection error with WatchService: java.net.ProtocolException: Expected HTTP 101 response but was '503 Service Unavailable'
 [02:04:33 INFO] [connect]: Trying to reconnect in 50.917s...
+[02:06:08 ERROR] [connect]: Connection error with WatchService: java.net.ProtocolException: Expected HTTP 101 response but was '503 Service Unavailable'
+[02:06:08 INFO] [connect]: Trying to reconnect in 2m 40.032s...
+[02:09:30 ERROR] [connect]: Connection error with WatchService: java.net.ProtocolException: Expected HTTP 101 response but was '503 Service Unavailable'
+[02:09:30 INFO] [connect]: Trying to reconnect in 4m 3.994s...
