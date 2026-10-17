@@ -1,13 +1,7 @@
-01:49:56 UTC — velocity diag (running)
+01:55:02 UTC — velocity diag (running)
 registered: 0
 0 matching lines
 === velocity.log (tail 40) ===
-2026-10-16T23:20:46.507253581Z main WARN Advanced terminal features are not available in this environment
-[23:20:46 INFO]: Booting up Velocity 4.1.1...
-[23:20:47 INFO]: Connections will use epoll channels, libdeflate (Linux x86_64) compression, OpenSSL 3.x.x (Linux x86_64) ciphers
-[23:20:47 WARN]: The proxy is running in offline mode! This is a security risk and you will NOT receive any support!
-[23:20:47 INFO]: Loading localizations...
-[23:20:47 INFO]: Loading plugins...
 WARNING: Final field id in class com.velocitypowered.api.plugin.ap.SerializedPluginDescription has been mutated reflectively by class com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$2 in unnamed module @530612ba (file:/home/runner/mc/velocity/velocity.jar)
 WARNING: Use --enable-final-field-mutation=ALL-UNNAMED to avoid a warning
 WARNING: Mutating final fields will be blocked in a future release unless final field mutation is enabled
@@ -42,3 +36,9 @@ WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
 [23:21:21 INFO]: [server connection] DiagProbe -> folia has connected
 [23:21:46 INFO]: [connected player] DiagProbe (/127.0.0.1:44010) has disconnected
 [23:21:46 INFO]: [server connection] DiagProbe -> folia has disconnected
+[01:53:27 ERROR] [connect]: Connection error with WatchService: java.io.EOFException
+[01:53:27 INFO] [connect]: Trying to reconnect in 1.24s...
+[01:54:08 ERROR] [connect]: Connection error with WatchService: java.net.ProtocolException: Expected HTTP 101 response but was '503 Service Unavailable'
+[01:54:08 INFO] [connect]: Trying to reconnect in 1.18s...
+[01:54:49 ERROR] [connect]: Connection error with WatchService: java.net.ProtocolException: Expected HTTP 101 response but was '503 Service Unavailable'
+[01:54:49 INFO] [connect]: Trying to reconnect in 3.269s...
