@@ -1,8 +1,7 @@
-02:10:21 UTC — velocity diag (running)
+02:15:27 UTC — velocity diag (running)
 registered: 0
 0 matching lines
 === velocity.log (tail 40) ===
-[23:20:49 INFO] [viabackwards]: Loading translations...
 [23:20:49 INFO] [viabackwards]: Registering protocols...
 [23:20:49 INFO] [viaversion]: ViaVersion detected lowest supported version by the proxy: 1.13 (393)
 [23:20:49 INFO] [viaversion]: Highest supported version by the proxy: 26.2 (776)
@@ -42,3 +41,4 @@ registered: 0
 [02:06:08 INFO] [connect]: Trying to reconnect in 2m 40.032s...
 [02:09:30 ERROR] [connect]: Connection error with WatchService: java.net.ProtocolException: Expected HTTP 101 response but was '503 Service Unavailable'
 [02:09:30 INFO] [connect]: Trying to reconnect in 4m 3.994s...
+[02:13:35 INFO] [connect]: Started watching for new player sessions
