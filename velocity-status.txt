@@ -1,13 +1,7 @@
-02:00:09 UTC — velocity diag (running)
+02:05:15 UTC — velocity diag (running)
 registered: 0
 0 matching lines
 === velocity.log (tail 40) ===
-[23:20:48 INFO]: Loaded 4 plugins
-[23:20:48 WARN]: The server channel initializer has been replaced by java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
-[23:20:48 INFO] [connect]: Endpoint name: shadowsinthedark
-[23:20:48 INFO] [connect]: Your public address: shadowsinthedark.play.minekube.net
-[23:20:48 INFO] [connect]: A new version of Connect is available: 0.15.16 (current: 0.15.13)
-[23:20:48 INFO] [connect]: Download: https://github.com/minekube/connect-java/releases/latest
 [23:20:49 INFO] [connect]: Started watching for new player sessions
 [23:20:49 INFO] [viaversion]: Replacing channel initializers; you can safely ignore the following two warnings.
 [23:20:49 WARN]: The server channel initializer has been replaced by java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
@@ -42,3 +36,9 @@ registered: 0
 [01:58:39 INFO] [connect]: Trying to reconnect in 24.117s...
 [01:59:42 ERROR] [connect]: Connection error with WatchService: java.net.ProtocolException: Expected HTTP 101 response but was '503 Service Unavailable'
 [01:59:42 INFO] [connect]: Trying to reconnect in 28.187s...
+[02:00:56 ERROR] [connect]: Connection error with WatchService: java.net.ProtocolException: Expected HTTP 101 response but was '503 Service Unavailable'
+[02:00:56 INFO] [connect]: Trying to reconnect in 49.252s...
+[02:02:33 ERROR] [connect]: Connection error with WatchService: java.net.ProtocolException: Expected HTTP 101 response but was '503 Service Unavailable'
+[02:02:33 INFO] [connect]: Trying to reconnect in 1m 14.822s...
+[02:04:33 ERROR] [connect]: Connection error with WatchService: java.net.ProtocolException: Expected HTTP 101 response but was '503 Service Unavailable'
+[02:04:33 INFO] [connect]: Trying to reconnect in 50.917s...
