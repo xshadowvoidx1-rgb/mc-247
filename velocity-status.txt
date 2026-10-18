@@ -1,10 +1,7 @@
-23:00:50 UTC — velocity diag (running)
+23:05:55 UTC — velocity diag (running)
 registered: 0
 0 matching lines
 === velocity.log (tail 40) ===
-[22:03:49 INFO] [viabackwards]: Loading translations...
-[22:03:49 INFO] [viabackwards]: Registering protocols...
-[22:03:49 INFO] [viaversion]: ViaVersion detected lowest supported version by the proxy: 1.13 (393)
 [22:03:49 INFO] [viaversion]: Highest supported version by the proxy: 26.2 (776)
 [22:03:49 INFO]: Listening on /[0:0:0:0:0:0:0:0]:25565
 [22:03:49 INFO]: Done (3.33s)!
@@ -42,3 +39,6 @@ Internal Server Error (cause: java.net.ProtocolException: Expected HTTP 101 resp
 Internal Server Error (cause: java.net.ProtocolException: Expected HTTP 101 response but was '500 Internal Server Error')
 [22:51:47 INFO] [connect]: Trying to reconnect in 1m 21.043s...
 [22:53:09 INFO] [connect]: Started watching for new player sessions
+[23:01:58 ERROR] [connect]: Connection error with WatchService: java.io.EOFException
+[23:01:58 INFO] [connect]: Trying to reconnect in 0.52s...
+[23:02:31 INFO] [connect]: Started watching for new player sessions
