@@ -1,15 +1,7 @@
-22:40:29 UTC — velocity diag (running)
+22:45:35 UTC — velocity diag (running)
 registered: 0
 0 matching lines
 === velocity.log (tail 40) ===
-2026-10-18T22:03:46.105246590Z main WARN Advanced terminal features are not available in this environment
-[22:03:46 INFO]: Booting up Velocity 4.1.1...
-[22:03:46 INFO]: Connections will use epoll channels, libdeflate (Linux x86_64) compression, OpenSSL 3.x.x (Linux x86_64) ciphers
-[22:03:46 WARN]: The proxy is running in offline mode! This is a security risk and you will NOT receive any support!
-[22:03:47 INFO]: Loading localizations...
-[22:03:47 INFO]: Loading plugins...
-WARNING: Final field id in class com.velocitypowered.api.plugin.ap.SerializedPluginDescription has been mutated reflectively by class com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$2 in unnamed module @530612ba (file:/home/runner/mc/velocity/velocity.jar)
-WARNING: Use --enable-final-field-mutation=ALL-UNNAMED to avoid a warning
 WARNING: Mutating final fields will be blocked in a future release unless final field mutation is enabled
 WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
 WARNING: sun.misc.Unsafe::staticFieldBase has been called by com.google.inject.internal.aop.HiddenClassDefiner (file:/home/runner/mc/velocity/velocity.jar)
@@ -42,3 +34,11 @@ WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
 [22:04:20 INFO]: [server connection] DiagProbe -> folia has connected
 [22:04:46 INFO]: [connected player] DiagProbe (/127.0.0.1:46700) has disconnected
 [22:04:46 INFO]: [server connection] DiagProbe -> folia has disconnected
+[22:42:24 ERROR] [connect]: Connection error with WatchService: java.io.EOFException
+[22:42:24 INFO] [connect]: Trying to reconnect in 0.986s...
+[22:43:03 ERROR] [connect]: Connection error with WatchService: java.net.ProtocolException: Expected HTTP 101 response but was '503 Service Unavailable'
+[22:43:03 INFO] [connect]: Trying to reconnect in 1.685s...
+[22:43:44 ERROR] [connect]: Connection error with WatchService: java.net.ProtocolException: Expected HTTP 101 response but was '503 Service Unavailable'
+[22:43:44 INFO] [connect]: Trying to reconnect in 3.025s...
+[22:44:34 ERROR] [connect]: Connection error with WatchService: java.net.ProtocolException: Expected HTTP 101 response but was '502 Bad Gateway'
+[22:44:34 INFO] [connect]: Trying to reconnect in 4.051s...
