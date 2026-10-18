@@ -1,24 +1,7 @@
-10:40:56 UTC — velocity diag (running)
+10:46:02 UTC — velocity diag (running)
 registered: 0
 0 matching lines
 === velocity.log (tail 40) ===
-2026-10-18T06:29:44.438160331Z main WARN Advanced terminal features are not available in this environment
-[06:29:44 INFO]: Booting up Velocity 4.1.1...
-[06:29:44 INFO]: Connections will use epoll channels, libdeflate (Linux x86_64) compression, OpenSSL 3.x.x (Linux x86_64) ciphers
-[06:29:45 WARN]: The proxy is running in offline mode! This is a security risk and you will NOT receive any support!
-[06:29:45 INFO]: Loading localizations...
-[06:29:45 INFO]: Loading plugins...
-WARNING: Final field id in class com.velocitypowered.api.plugin.ap.SerializedPluginDescription has been mutated reflectively by class com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$2 in unnamed module @530612ba (file:/home/runner/mc/velocity/velocity.jar)
-WARNING: Use --enable-final-field-mutation=ALL-UNNAMED to avoid a warning
-WARNING: Mutating final fields will be blocked in a future release unless final field mutation is enabled
-WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
-WARNING: sun.misc.Unsafe::staticFieldBase has been called by com.google.inject.internal.aop.HiddenClassDefiner (file:/home/runner/mc/velocity/velocity.jar)
-WARNING: Please consider reporting this to the maintainers of class com.google.inject.internal.aop.HiddenClassDefiner
-WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
-[06:29:46 WARN] [connect]: en_ is not a supported language.
-[06:29:46 INFO] [connect]: Took 689ms to boot Connect
-[06:29:46 INFO]: Loaded plugin connect 0.15.13 by Minekube
-[06:29:46 INFO]: Loaded plugin viaversion 5.12.0 by _MylesC, creeper123123321, Gerrygames, kennytv, Matsv, EnZaXD, RK_01
 [06:29:46 INFO]: Loaded plugin viabackwards 5.12.0 by Matsv, kennytv, Gerrygames, creeper123123321, ForceUpdate1, EnZaXD
 [06:29:46 INFO]: Loaded 4 plugins
 [06:29:46 WARN]: The server channel initializer has been replaced by java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
@@ -42,3 +25,20 @@ WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
 [06:30:19 INFO]: [server connection] DiagProbe -> folia has connected
 [06:30:44 INFO]: [connected player] DiagProbe (/127.0.0.1:56664) has disconnected
 [06:30:44 INFO]: [server connection] DiagProbe -> folia has disconnected
+[10:45:27 ERROR] [connect]: Connection error with WatchService: java.io.EOFException
+[10:45:27 INFO] [connect]: Trying to reconnect in 0.677s...
+[10:45:51 ERROR] [connect]: Connection error with WatchService: java.lang.RuntimeException: failed to validate or acquire endpoint
+Internal Server Error (cause: java.net.ProtocolException: Expected HTTP 101 response but was '500 Internal Server Error')
+[10:45:51 INFO] [connect]: Trying to reconnect in 1.072s...
+[10:45:52 ERROR] [connect]: Connection error with WatchService: java.lang.RuntimeException: failed to validate or acquire endpoint
+Internal Server Error (cause: java.net.ProtocolException: Expected HTTP 101 response but was '500 Internal Server Error')
+[10:45:52 INFO] [connect]: Trying to reconnect in 1.785s...
+[10:45:54 ERROR] [connect]: Connection error with WatchService: java.lang.RuntimeException: failed to validate or acquire endpoint
+Internal Server Error (cause: java.net.ProtocolException: Expected HTTP 101 response but was '500 Internal Server Error')
+[10:45:54 INFO] [connect]: Trying to reconnect in 1.918s...
+[10:45:56 ERROR] [connect]: Connection error with WatchService: java.lang.RuntimeException: failed to validate or acquire endpoint
+Internal Server Error (cause: java.net.ProtocolException: Expected HTTP 101 response but was '500 Internal Server Error')
+[10:45:56 INFO] [connect]: Trying to reconnect in 3.678s...
+[10:46:00 ERROR] [connect]: Connection error with WatchService: java.lang.RuntimeException: failed to validate or acquire endpoint
+Internal Server Error (cause: java.net.ProtocolException: Expected HTTP 101 response but was '500 Internal Server Error')
+[10:46:00 INFO] [connect]: Trying to reconnect in 9.125s...
