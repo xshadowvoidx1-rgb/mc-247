@@ -1,23 +1,7 @@
-22:45:35 UTC — velocity diag (running)
+22:50:40 UTC — velocity diag (running)
 registered: 0
 0 matching lines
 === velocity.log (tail 40) ===
-WARNING: Mutating final fields will be blocked in a future release unless final field mutation is enabled
-WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
-WARNING: sun.misc.Unsafe::staticFieldBase has been called by com.google.inject.internal.aop.HiddenClassDefiner (file:/home/runner/mc/velocity/velocity.jar)
-WARNING: Please consider reporting this to the maintainers of class com.google.inject.internal.aop.HiddenClassDefiner
-WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
-[22:03:48 WARN] [connect]: en_ is not a supported language.
-[22:03:48 INFO] [connect]: Took 804ms to boot Connect
-[22:03:48 INFO]: Loaded plugin connect 0.15.13 by Minekube
-[22:03:48 INFO]: Loaded plugin viaversion 5.12.0 by _MylesC, creeper123123321, Gerrygames, kennytv, Matsv, EnZaXD, RK_01
-[22:03:48 INFO]: Loaded plugin viabackwards 5.12.0 by Matsv, kennytv, Gerrygames, creeper123123321, ForceUpdate1, EnZaXD
-[22:03:48 INFO]: Loaded 4 plugins
-[22:03:48 WARN]: The server channel initializer has been replaced by java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
-[22:03:48 INFO] [connect]: Endpoint name: shadowsinthedark
-[22:03:48 INFO] [connect]: Your public address: shadowsinthedark.play.minekube.net
-[22:03:48 INFO] [connect]: A new version of Connect is available: 0.15.16 (current: 0.15.13)
-[22:03:48 INFO] [connect]: Download: https://github.com/minekube/connect-java/releases/latest
 [22:03:48 INFO] [connect]: Started watching for new player sessions
 [22:03:49 INFO] [viaversion]: Replacing channel initializers; you can safely ignore the following two warnings.
 [22:03:49 WARN]: The server channel initializer has been replaced by java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
@@ -42,3 +26,19 @@ WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
 [22:43:44 INFO] [connect]: Trying to reconnect in 3.025s...
 [22:44:34 ERROR] [connect]: Connection error with WatchService: java.net.ProtocolException: Expected HTTP 101 response but was '502 Bad Gateway'
 [22:44:34 INFO] [connect]: Trying to reconnect in 4.051s...
+[22:45:39 ERROR] [connect]: Connection error with WatchService: java.net.ProtocolException: Expected HTTP 101 response but was '503 Service Unavailable'
+[22:45:39 INFO] [connect]: Trying to reconnect in 7.478s...
+[22:46:34 ERROR] [connect]: Connection error with WatchService: java.net.ProtocolException: Expected HTTP 101 response but was '503 Service Unavailable'
+[22:46:34 INFO] [connect]: Trying to reconnect in 9.5s...
+[22:47:22 ERROR] [connect]: Connection error with WatchService: java.net.ProtocolException: Expected HTTP 101 response but was '503 Service Unavailable'
+[22:47:22 INFO] [connect]: Trying to reconnect in 16.474s...
+[22:48:28 ERROR] [connect]: Connection error with WatchService: java.net.ProtocolException: Expected HTTP 101 response but was '503 Service Unavailable'
+[22:48:28 INFO] [connect]: Trying to reconnect in 15.598s...
+[22:49:32 ERROR] [connect]: Connection error with WatchService: java.net.ProtocolException: Expected HTTP 101 response but was '503 Service Unavailable'
+[22:49:32 INFO] [connect]: Trying to reconnect in 26.659s...
+[22:49:59 ERROR] [connect]: Connection error with WatchService: java.lang.RuntimeException: failed to validate or acquire endpoint
+Internal Server Error (cause: java.net.ProtocolException: Expected HTTP 101 response but was '500 Internal Server Error')
+[22:49:59 INFO] [connect]: Trying to reconnect in 38.505s...
+[22:50:38 ERROR] [connect]: Connection error with WatchService: java.lang.RuntimeException: failed to validate or acquire endpoint
+Internal Server Error (cause: java.net.ProtocolException: Expected HTTP 101 response but was '500 Internal Server Error')
+[22:50:38 INFO] [connect]: Trying to reconnect in 1m 9.311s...
