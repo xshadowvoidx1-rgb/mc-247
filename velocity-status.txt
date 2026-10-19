@@ -1,28 +1,7 @@
-00:12:00 UTC — velocity diag (running)
+00:17:05 UTC — velocity diag (running)
 registered: 0
 0 matching lines
 === velocity.log (tail 40) ===
-[22:03:49 INFO] [viaversion]: Highest supported version by the proxy: 26.2 (776)
-[22:03:49 INFO]: Listening on /[0:0:0:0:0:0:0:0]:25565
-[22:03:49 INFO]: Done (3.33s)!
-[22:03:49 WARN] [viaversion]: There is a newer plugin version available: 5.12.1, you're on: 5.12.0
-[22:03:50 INFO] [viaversion]: Finished mapping loading, shutting down loader executor.
-[22:04:20 INFO]: [connected player] DiagProbe (/127.0.0.1:46700) has connected
-[22:04:20 INFO]: [server connection] DiagProbe -> folia has connected
-[22:04:46 INFO]: [connected player] DiagProbe (/127.0.0.1:46700) has disconnected
-[22:04:46 INFO]: [server connection] DiagProbe -> folia has disconnected
-[22:42:24 ERROR] [connect]: Connection error with WatchService: java.io.EOFException
-[22:42:24 INFO] [connect]: Trying to reconnect in 0.986s...
-[22:43:03 ERROR] [connect]: Connection error with WatchService: java.net.ProtocolException: Expected HTTP 101 response but was '503 Service Unavailable'
-[22:43:03 INFO] [connect]: Trying to reconnect in 1.685s...
-[22:43:44 ERROR] [connect]: Connection error with WatchService: java.net.ProtocolException: Expected HTTP 101 response but was '503 Service Unavailable'
-[22:43:44 INFO] [connect]: Trying to reconnect in 3.025s...
-[22:44:34 ERROR] [connect]: Connection error with WatchService: java.net.ProtocolException: Expected HTTP 101 response but was '502 Bad Gateway'
-[22:44:34 INFO] [connect]: Trying to reconnect in 4.051s...
-[22:45:39 ERROR] [connect]: Connection error with WatchService: java.net.ProtocolException: Expected HTTP 101 response but was '503 Service Unavailable'
-[22:45:39 INFO] [connect]: Trying to reconnect in 7.478s...
-[22:46:34 ERROR] [connect]: Connection error with WatchService: java.net.ProtocolException: Expected HTTP 101 response but was '503 Service Unavailable'
-[22:46:34 INFO] [connect]: Trying to reconnect in 9.5s...
 [22:47:22 ERROR] [connect]: Connection error with WatchService: java.net.ProtocolException: Expected HTTP 101 response but was '503 Service Unavailable'
 [22:47:22 INFO] [connect]: Trying to reconnect in 16.474s...
 [22:48:28 ERROR] [connect]: Connection error with WatchService: java.net.ProtocolException: Expected HTTP 101 response but was '503 Service Unavailable'
@@ -42,3 +21,24 @@ Internal Server Error (cause: java.net.ProtocolException: Expected HTTP 101 resp
 [23:01:58 ERROR] [connect]: Connection error with WatchService: java.io.EOFException
 [23:01:58 INFO] [connect]: Trying to reconnect in 0.52s...
 [23:02:31 INFO] [connect]: Started watching for new player sessions
+[00:15:01 ERROR] [connect]: Connection error with WatchService: java.io.EOFException
+[00:15:01 INFO] [connect]: Trying to reconnect in 1.039s...
+[00:15:33 ERROR] [connect]: Connection error with WatchService: java.lang.RuntimeException: failed to validate or acquire endpoint
+Internal Server Error (cause: java.net.ProtocolException: Expected HTTP 101 response but was '500 Internal Server Error')
+[00:15:33 INFO] [connect]: Trying to reconnect in 1.133s...
+[00:15:35 ERROR] [connect]: Connection error with WatchService: java.lang.RuntimeException: failed to validate or acquire endpoint
+Internal Server Error (cause: java.net.ProtocolException: Expected HTTP 101 response but was '500 Internal Server Error')
+[00:15:35 INFO] [connect]: Trying to reconnect in 2.278s...
+[00:15:37 ERROR] [connect]: Connection error with WatchService: java.lang.RuntimeException: failed to validate or acquire endpoint
+Internal Server Error (cause: java.net.ProtocolException: Expected HTTP 101 response but was '500 Internal Server Error')
+[00:15:37 INFO] [connect]: Trying to reconnect in 1.875s...
+[00:15:39 ERROR] [connect]: Connection error with WatchService: java.lang.RuntimeException: failed to validate or acquire endpoint
+Internal Server Error (cause: java.net.ProtocolException: Expected HTTP 101 response but was '500 Internal Server Error')
+[00:15:39 INFO] [connect]: Trying to reconnect in 3.295s...
+[00:15:42 ERROR] [connect]: Connection error with WatchService: java.lang.RuntimeException: failed to validate or acquire endpoint
+Internal Server Error (cause: java.net.ProtocolException: Expected HTTP 101 response but was '500 Internal Server Error')
+[00:15:42 INFO] [connect]: Trying to reconnect in 6.51s...
+[00:15:49 ERROR] [connect]: Connection error with WatchService: java.lang.RuntimeException: failed to validate or acquire endpoint
+Internal Server Error (cause: java.net.ProtocolException: Expected HTTP 101 response but was '500 Internal Server Error')
+[00:15:49 INFO] [connect]: Trying to reconnect in 11.796s...
+[00:16:01 INFO] [connect]: Started watching for new player sessions
