@@ -1,14 +1,7 @@
-06:31:43 UTC — velocity diag (running)
+06:36:52 UTC — velocity diag (running)
 registered: 0
 0 matching lines
 === velocity.log (tail 40) ===
-WARNING: sun.misc.Unsafe::staticFieldBase has been called by com.google.inject.internal.aop.HiddenClassDefiner (file:/home/runner/mc/velocity/velocity.jar)
-WARNING: Please consider reporting this to the maintainers of class com.google.inject.internal.aop.HiddenClassDefiner
-WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
-[03:15:08 WARN] [connect]: en_ is not a supported language.
-[03:15:08 INFO] [connect]: Took 814ms to boot Connect
-[03:15:08 INFO]: Loaded plugin connect 0.15.13 by Minekube
-[03:15:08 INFO]: Loaded plugin viaversion 5.12.0 by _MylesC, creeper123123321, Gerrygames, kennytv, Matsv, EnZaXD, RK_01
 [03:15:08 INFO]: Loaded plugin viabackwards 5.12.0 by Matsv, kennytv, Gerrygames, creeper123123321, ForceUpdate1, EnZaXD
 [03:15:08 INFO]: Loaded 4 plugins
 [03:15:08 WARN]: The server channel initializer has been replaced by java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
@@ -42,3 +35,10 @@ WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
 [06:30:46 INFO] [connect]: Trying to reconnect in 2.023s...
 [06:31:37 ERROR] [connect]: Connection error with WatchService: java.net.ProtocolException: Expected HTTP 101 response but was '503 Service Unavailable'
 [06:31:37 INFO] [connect]: Trying to reconnect in 3.701s...
+[06:32:04 ERROR] [connect]: Connection error with WatchService: java.lang.RuntimeException: failed to validate or acquire endpoint
+Internal Server Error (cause: java.net.ProtocolException: Expected HTTP 101 response but was '500 Internal Server Error')
+[06:32:04 INFO] [connect]: Trying to reconnect in 4.434s...
+[06:32:08 ERROR] [connect]: Connection error with WatchService: java.lang.RuntimeException: failed to validate or acquire endpoint
+Internal Server Error (cause: java.net.ProtocolException: Expected HTTP 101 response but was '500 Internal Server Error')
+[06:32:08 INFO] [connect]: Trying to reconnect in 14.946s...
+[06:32:23 INFO] [connect]: Started watching for new player sessions
