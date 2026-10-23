@@ -1,12 +1,6 @@
-23:53:23 UTC — velocity diag (running)
-registered: 0
-0 matching lines
+23:58:32 UTC — velocity diag (running)
+registered: 1 matching lines
 === velocity.log (tail 40) ===
-2026-10-23T21:27:48.033831200Z main WARN Advanced terminal features are not available in this environment
-[21:27:48 INFO]: Booting up Velocity 4.1.1...
-[21:27:48 INFO]: Connections will use epoll channels, libdeflate (Linux x86_64) compression, OpenSSL 3.x.x (Linux x86_64) ciphers
-[21:27:48 WARN]: The proxy is running in offline mode! This is a security risk and you will NOT receive any support!
-[21:27:48 INFO]: Loading localizations...
 [21:27:48 INFO]: Loading plugins...
 WARNING: Final field id in class com.velocitypowered.api.plugin.ap.SerializedPluginDescription has been mutated reflectively by class com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$2 in unnamed module @530612ba (file:/home/runner/mc/velocity/velocity.jar)
 WARNING: Use --enable-final-field-mutation=ALL-UNNAMED to avoid a warning
@@ -42,3 +36,8 @@ WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
 [21:28:22 INFO]: [server connection] DiagProbe -> folia has connected
 [21:28:47 INFO]: [connected player] DiagProbe (/127.0.0.1:34428) has disconnected
 [21:28:47 INFO]: [server connection] DiagProbe -> folia has disconnected
+[23:55:39 INFO]: [connected player] DolphinIsHere (/172.16.39.42:0) has connected
+[23:55:39 INFO]: [server connection] DolphinIsHere -> folia has connected
+[23:55:42 INFO] [connect]: Connect tunneled player DolphinIsHere disconnected
+[23:55:42 INFO]: [connected player] DolphinIsHere (/172.16.39.42:0) has disconnected
+[23:55:42 INFO]: [server connection] DolphinIsHere -> folia has disconnected
