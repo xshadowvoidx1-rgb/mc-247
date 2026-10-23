@@ -1,10 +1,7 @@
-10:46:07 UTC — velocity diag (running)
+10:51:14 UTC — velocity diag (running)
 registered: 0
 0 matching lines
 === velocity.log (tail 40) ===
-[05:53:28 WARN]: The proxy is running in offline mode! This is a security risk and you will NOT receive any support!
-[05:53:28 INFO]: Loading localizations...
-[05:53:28 INFO]: Loading plugins...
 WARNING: Final field id in class com.velocitypowered.api.plugin.ap.SerializedPluginDescription has been mutated reflectively by class com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$2 in unnamed module @530612ba (file:/home/runner/mc/velocity/velocity.jar)
 WARNING: Use --enable-final-field-mutation=ALL-UNNAMED to avoid a warning
 WARNING: Mutating final fields will be blocked in a future release unless final field mutation is enabled
@@ -42,3 +39,6 @@ WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
 [10:19:21 ERROR] [connect]: Connection error with WatchService: java.io.EOFException
 [10:19:21 INFO] [connect]: Trying to reconnect in 0.983s...
 [10:19:57 INFO] [connect]: Started watching for new player sessions
+[10:49:43 ERROR] [connect]: Connection error with WatchService: java.io.EOFException
+[10:49:43 INFO] [connect]: Trying to reconnect in 0.737s...
+[10:50:22 INFO] [connect]: Started watching for new player sessions
