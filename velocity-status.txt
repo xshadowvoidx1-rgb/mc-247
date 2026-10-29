@@ -1,10 +1,7 @@
-05:03:59 UTC — velocity diag (running)
+05:09:07 UTC — velocity diag (running)
 registered: 0
 0 matching lines
 === velocity.log (tail 40) ===
-[02:02:55 INFO]: Loaded plugin connect 0.15.13 by Minekube
-[02:02:55 INFO]: Loaded plugin viaversion 5.12.0 by _MylesC, creeper123123321, Gerrygames, kennytv, Matsv, EnZaXD, RK_01
-[02:02:55 INFO]: Loaded plugin viabackwards 5.12.0 by Matsv, kennytv, Gerrygames, creeper123123321, ForceUpdate1, EnZaXD
 [02:02:55 INFO]: Loaded 4 plugins
 [02:02:55 WARN]: The server channel initializer has been replaced by java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
 [02:02:56 INFO] [connect]: Endpoint name: shadowsinthedark
@@ -42,3 +39,6 @@ registered: 0
 [04:04:54 ERROR] [connect]: Connection error with WatchService: java.net.SocketTimeoutException: sent ping but didn't receive pong within 30000ms (after 15 successful ping/pongs)
 [04:04:54 INFO] [connect]: Trying to reconnect in 1.479s...
 [04:04:56 INFO] [connect]: Started watching for new player sessions
+[05:06:08 ERROR] [connect]: Connection error with WatchService: java.lang.RuntimeException: Watch closed with code 1012: restarting
+[05:06:08 INFO] [connect]: Trying to reconnect in 0.709s...
+[05:06:10 INFO] [connect]: Started watching for new player sessions
