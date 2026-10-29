@@ -1,10 +1,7 @@
-04:02:33 UTC — velocity diag (running)
+04:07:40 UTC — velocity diag (running)
 registered: 0
 0 matching lines
 === velocity.log (tail 40) ===
-WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
-[02:02:55 WARN] [connect]: en_ is not a supported language.
-[02:02:55 INFO] [connect]: Took 786ms to boot Connect
 [02:02:55 INFO]: Loaded plugin connect 0.15.13 by Minekube
 [02:02:55 INFO]: Loaded plugin viaversion 5.12.0 by _MylesC, creeper123123321, Gerrygames, kennytv, Matsv, EnZaXD, RK_01
 [02:02:55 INFO]: Loaded plugin viabackwards 5.12.0 by Matsv, kennytv, Gerrygames, creeper123123321, ForceUpdate1, EnZaXD
@@ -42,3 +39,6 @@ WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
 [03:56:22 ERROR] [connect]: Connection error with WatchService: java.net.SocketTimeoutException: sent ping but didn't receive pong within 30000ms (after 1 successful ping/pongs)
 [03:56:22 INFO] [connect]: Trying to reconnect in 1.045s...
 [03:56:24 INFO] [connect]: Started watching for new player sessions
+[04:04:54 ERROR] [connect]: Connection error with WatchService: java.net.SocketTimeoutException: sent ping but didn't receive pong within 30000ms (after 15 successful ping/pongs)
+[04:04:54 INFO] [connect]: Trying to reconnect in 1.479s...
+[04:04:56 INFO] [connect]: Started watching for new player sessions
