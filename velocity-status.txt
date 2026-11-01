@@ -1,10 +1,7 @@
-09:17:23 UTC — velocity diag (running)
+09:22:29 UTC — velocity diag (running)
 registered: 0
 0 matching lines
 === velocity.log (tail 40) ===
-WARNING: Final field id in class com.velocitypowered.api.plugin.ap.SerializedPluginDescription has been mutated reflectively by class com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$2 in unnamed module @530612ba (file:/home/runner/mc/velocity/velocity.jar)
-WARNING: Use --enable-final-field-mutation=ALL-UNNAMED to avoid a warning
-WARNING: Mutating final fields will be blocked in a future release unless final field mutation is enabled
 WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
 WARNING: sun.misc.Unsafe::staticFieldBase has been called by com.google.inject.internal.aop.HiddenClassDefiner (file:/home/runner/mc/velocity/velocity.jar)
 WARNING: Please consider reporting this to the maintainers of class com.google.inject.internal.aop.HiddenClassDefiner
@@ -42,3 +39,6 @@ WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
 [09:01:41 INFO] [connect]: Trying to reconnect in 1.811s...
 [09:01:53 ERROR] [connect]: Connection error with WatchService: java.net.SocketException: Network is unreachable
 [09:01:53 INFO] [connect]: Trying to reconnect in 1.178s...
+[09:17:48 ERROR] [connect]: Connection error with WatchService: java.net.SocketException: Network is unreachable
+[09:17:48 INFO] [connect]: Trying to reconnect in 4.096s...
+[09:17:52 INFO] [connect]: Started watching for new player sessions
