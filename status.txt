@@ -1,1 +1,1 @@
-02:42:41 UTC — configs written (folia+velocity+connect)
+02:42:42 UTC — folia starting (survival, offline, 25566)
