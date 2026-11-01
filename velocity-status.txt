@@ -1,8 +1,7 @@
-04:36:36 UTC — velocity diag (running)
+04:41:42 UTC — velocity diag (running)
 registered: 0
 0 matching lines
 === velocity.log (tail 40) ===
-[02:43:00 INFO]: Connections will use epoll channels, libdeflate (Linux x86_64) compression, OpenSSL 3.x.x (Linux x86_64) ciphers
 [02:43:00 WARN]: The proxy is running in offline mode! This is a security risk and you will NOT receive any support!
 [02:43:00 INFO]: Loading localizations...
 [02:43:00 INFO]: Loading plugins...
@@ -42,3 +41,4 @@ WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
 [02:43:59 INFO]: [server connection] DiagProbe -> folia has disconnected
 [04:36:29 ERROR] [connect]: Connection error with WatchService: java.io.EOFException
 [04:36:29 INFO] [connect]: Trying to reconnect in 1.035s...
+[04:37:05 INFO] [connect]: Started watching for new player sessions
