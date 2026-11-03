@@ -1,4 +1,4 @@
-15:20:38 UTC — velocity diag (running)
+15:25:44 UTC — velocity diag (running)
 registered: 1 matching lines
 === velocity.log (tail 40) ===
 WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
