@@ -1,9 +1,6 @@
-16:47:18 UTC — velocity diag (running)
+16:52:24 UTC — velocity diag (running)
 registered: 2 matching lines
 === velocity.log (tail 40) ===
-[11:49:36 INFO]: Loaded plugin viabackwards 5.12.0 by Matsv, kennytv, Gerrygames, creeper123123321, ForceUpdate1, EnZaXD
-[11:49:36 INFO]: Loaded 4 plugins
-[11:49:36 WARN]: The server channel initializer has been replaced by java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
 [11:49:36 INFO] [connect]: Endpoint name: shadowsinthedark
 [11:49:36 INFO] [connect]: Your public address: shadowsinthedark.play.minekube.net
 [11:49:36 INFO] [connect]: A new version of Connect is available: 0.15.18 (current: 0.15.13)
@@ -41,3 +38,6 @@ registered: 2 matching lines
 [15:54:47 ERROR] [connect]: Connection error with WatchService: java.io.EOFException
 [15:54:47 INFO] [connect]: Trying to reconnect in 0.952s...
 [15:55:22 INFO] [connect]: Started watching for new player sessions
+[16:47:38 ERROR] [connect]: Connection error with WatchService: java.io.EOFException
+[16:47:38 INFO] [connect]: Trying to reconnect in 1.243s...
+[16:48:06 INFO] [connect]: Started watching for new player sessions
