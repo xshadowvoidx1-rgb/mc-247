@@ -1,10 +1,6 @@
-16:37:31 UTC — velocity diag (running)
-registered: 0
-0 matching lines
+16:42:40 UTC — velocity diag (running)
+registered: 2 matching lines
 === velocity.log (tail 40) ===
-2026-11-06T12:30:34.915650208Z main WARN Advanced terminal features are not available in this environment
-[12:30:35 INFO]: Booting up Velocity 4.1.1...
-[12:30:35 INFO]: Connections will use epoll channels, libdeflate (Linux x86_64) compression, OpenSSL 3.x.x (Linux x86_64) ciphers
 [12:30:35 WARN]: The proxy is running in offline mode! This is a security risk and you will NOT receive any support!
 [12:30:35 INFO]: Loading localizations...
 [12:30:35 INFO]: Loading plugins...
@@ -42,3 +38,6 @@ WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
 [12:31:09 INFO]: [server connection] DiagProbe -> folia has connected
 [12:31:35 INFO]: [connected player] DiagProbe (/127.0.0.1:43464) has disconnected
 [12:31:35 INFO]: [server connection] DiagProbe -> folia has disconnected
+[16:38:47 INFO]: [initial connection] /172.16.57.178:0 has disconnected: Bedrock identity verification failed
+[16:38:47 INFO] [connect]: Connect tunneled player The_Wemmbu1 disconnected
+[16:38:47 ERROR] [connect]: Connection error with TunnelService player=The_Wemmbu1 session=dbn054rb7foc3remgti0 tunnelToBackendPackets=0 tunnelToBackendBytes=0: java.net.ProtocolException: Expected HTTP 101 response but was '404 Not Found'
