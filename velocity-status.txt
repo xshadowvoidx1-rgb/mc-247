@@ -1,13 +1,6 @@
-15:19:25 UTC — velocity diag (running)
-registered: 0
-0 matching lines
+15:24:31 UTC — velocity diag (running)
+registered: 1 matching lines
 === velocity.log (tail 40) ===
-2026-11-07T14:27:15.881553396Z main WARN Advanced terminal features are not available in this environment
-[14:27:16 INFO]: Booting up Velocity 4.1.1...
-[14:27:16 INFO]: Connections will use epoll channels, libdeflate (Linux x86_64) compression, OpenSSL 3.x.x (Linux x86_64) ciphers
-[14:27:16 WARN]: The proxy is running in offline mode! This is a security risk and you will NOT receive any support!
-[14:27:16 INFO]: Loading localizations...
-[14:27:16 INFO]: Loading plugins...
 WARNING: Final field id in class com.velocitypowered.api.plugin.ap.SerializedPluginDescription has been mutated reflectively by class com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$2 in unnamed module @530612ba (file:/home/runner/mc/velocity/velocity.jar)
 WARNING: Use --enable-final-field-mutation=ALL-UNNAMED to avoid a warning
 WARNING: Mutating final fields will be blocked in a future release unless final field mutation is enabled
@@ -42,3 +35,9 @@ WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
 [14:27:50 INFO]: [server connection] DiagProbe -> folia has connected
 [14:28:16 INFO]: [connected player] DiagProbe (/127.0.0.1:53242) has disconnected
 [14:28:16 INFO]: [server connection] DiagProbe -> folia has disconnected
+[15:20:15 INFO]: [connected player] sami189 (/172.16.14.162:0) has connected
+[15:20:15 INFO]: [server connection] sami189 -> folia has connected
+[15:20:30 INFO]: [connected player] sami189 (/172.16.14.162:0): kicked from server folia: multiplayer.disconnect.flying
+[15:20:30 INFO]: [server connection] sami189 -> folia has disconnected
+[15:20:30 INFO]: [connected player] sami189 (/172.16.14.162:0) has disconnected: You were kicked from folia: multiplayer.disconnect.flying
+[15:20:30 INFO] [connect]: Connect tunneled player sami189 disconnected
