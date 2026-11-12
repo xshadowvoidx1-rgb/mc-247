@@ -1,10 +1,7 @@
-00:26:30 UTC — velocity diag (running)
+00:31:40 UTC — velocity diag (running)
 registered: 0
 0 matching lines
 === velocity.log (tail 40) ===
-[22:16:14 WARN]: The proxy is running in offline mode! This is a security risk and you will NOT receive any support!
-[22:16:14 INFO]: Loading localizations...
-[22:16:14 INFO]: Loading plugins...
 WARNING: Final field id in class com.velocitypowered.api.plugin.ap.SerializedPluginDescription has been mutated reflectively by class com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$2 in unnamed module @530612ba (file:/home/runner/mc/velocity/velocity.jar)
 WARNING: Use --enable-final-field-mutation=ALL-UNNAMED to avoid a warning
 WARNING: Mutating final fields will be blocked in a future release unless final field mutation is enabled
@@ -42,3 +39,6 @@ WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
 [23:59:16 ERROR] [connect]: Connection error with WatchService: java.net.SocketTimeoutException: sent ping but didn't receive pong within 30000ms (after 204 successful ping/pongs)
 [23:59:16 INFO] [connect]: Trying to reconnect in 1.5s...
 [23:59:18 INFO] [connect]: Started watching for new player sessions
+[00:27:21 ERROR] [connect]: Connection error with WatchService: java.net.SocketException: Connection reset
+[00:27:21 INFO] [connect]: Trying to reconnect in 1.289s...
+[00:27:22 INFO] [connect]: Started watching for new player sessions
